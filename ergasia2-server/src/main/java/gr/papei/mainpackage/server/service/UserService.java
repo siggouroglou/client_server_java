@@ -1,44 +1,65 @@
 package gr.papei.mainpackage.server.service;
 
-import gr.papei.mainpackage.server.data.*;
-
 /**
  *
  * @author siggouroglou@gmail.com
  */
 public class UserService {
-    private String name;
-    private String username;
-    private String password;
 
     public UserService() {
-        this.name = "";
-        this.username = "";
-        this.password = "";
     }
 
-    public String getName() {
-        return name;
+    /**
+     *
+     * @param user The object that includes the criteria that will be used for
+     * searching. Criteria is every column is not having null value.
+     * @return
+     */
+    public UserService[] searchUser(UserService user) {
+        return null;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    /**
+     * Create a new UserService object.
+     *
+     * @param user The new user that will be created.
+     * @return the user object that has been created.
+     */
+    public UserService createUser(UserService user) {
+        System.out.println("User created");
+        return null;
     }
 
-    public String getUsername() {
-        return username;
+    /**
+     * Update an existing user.
+     *
+     * @param id The id of the existing user that will be updated.
+     * @param user The user that will replace the existing user.
+     * @return The new updated user object.
+     */
+    public UserService updateUser(int id, UserService user) {
+        System.out.println("User updated");
+        return null;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    /**
+     * Deletes a user.
+     *
+     * @param user The user that will be deleted.
+     * @return The user that was deleted.
+     */
+    public UserService deleteUser(UserService user) {
+        System.out.println("User deleted");
+        return null;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    /**
+     *
+     * @return an array with all the existing users.
+     */
+    public UserService[] readAllUsers() {
+        System.out.println("Read all Users");
+        return null;
     }
     
     public boolean login(){

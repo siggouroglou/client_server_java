@@ -1,84 +1,51 @@
 package gr.papei.mainpackage.server.service;
 
-import gr.papei.mainpackage.server.data.*;
-import java.util.Date;
-
 /**
  *
  * @author siggouroglou@gmail.com
  */
 public class ProvoliService {
-    private int id;
-    private int filmId;
-    private int cinemaRoomId;
-    private Date startDate;
-    private Date endDate;
-    private int numberOfReservations;
-    private boolean isAvailable;
 
     public ProvoliService() {
-        this.id = -1;
-        this.filmId = -1;
-        this.cinemaRoomId = -1;
-        this.startDate = null;
-        this.endDate = null;
-        this.numberOfReservations = 0;
-        this.isAvailable = false;
     }
-
-    public int getId() {
-        return id;
+    
+    /**
+     * Create a provoli object.
+     * @param provoli The provoli object to be created.
+     * @return the new provoli object.
+     */
+    public ProvoliService createProvoli(ProvoliService provoli) {
+        System.out.println("Provoli created");
+        return null;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    
+    /**
+     * Update an existing provoli object.
+     * @param id The id of the object provoli to be updated.
+     * @param provoli The provoli object that will replace the existing.
+     * @return The new updated provoli object.
+     */
+    public ProvoliService updateProvoli(int id, ProvoliService provoli) {
+        System.out.println("Provoli updated");
+        return null;
     }
-
-    public int getFilmId() {
-        return filmId;
+    
+    /**
+     * Delete a provoli object.
+     * @param provoli The provoli object that will be deleted.
+     * @return the deleted provoli object.
+     */
+    public ProvoliService deleteProvoli(ProvoliService provoli) {
+        System.out.println("Provoli deleted");
+        return null;
     }
-
-    public void setFilmId(int filmId) {
-        this.filmId = filmId;
-    }
-
-    public int getCinemaRoomId() {
-        return cinemaRoomId;
-    }
-
-    public void setCinemaRoomId(int cinemaRoomId) {
-        this.cinemaRoomId = cinemaRoomId;
-    }
-
-    public Date getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
-
-    public int getNumberOfReservations() {
-        return numberOfReservations;
-    }
-
-    public void setNumberOfReservations(int numberOfReservations) {
-        this.numberOfReservations = numberOfReservations;
-    }
-
-    public boolean isIsAvailable() {
-        return isAvailable;
-    }
-
-    public void setIsAvailable(boolean isAvailable) {
-        this.isAvailable = isAvailable;
+    
+    /**
+     * 
+     * @return an array of provoli objects.
+     */
+    public ProvoliService[] readAllProvoli() {
+        System.out.println("read all the Provoli");
+        return null;
     }
 }

@@ -1,4 +1,4 @@
-package gr.papei.mainpackage.server.data;
+package gr.papei.mainpackage.server.data.model;
 
 /**
  *
@@ -37,13 +37,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-    
-    public boolean login(){
-        return true;
-    }
-    
-    public boolean logout(){
-        return true;
     }
 }

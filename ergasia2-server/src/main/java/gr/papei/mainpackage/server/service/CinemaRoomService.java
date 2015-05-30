@@ -1,44 +1,51 @@
 package gr.papei.mainpackage.server.service;
 
-import gr.papei.mainpackage.server.data.*;
-
 /**
  *
  * @author siggouroglou@gmail.com
  */
 public class CinemaRoomService {
 
-    private int id;
-    private boolean is3D;
-    private int totalSeats;
-
     public CinemaRoomService() {
-        this.id = -1;
-        this.is3D = false;
-        this.totalSeats = 0;
     }
-
-    public int getId() {
-        return id;
+    
+    /**
+     * Create a new cinema room.
+     * @param cinemaRoom The new cinema room that will be created.
+     * @return the new cinema room object.
+     */
+    public CinemaRoomService createCinemaRoom(CinemaRoomService cinemaRoom){
+        System.out.println("CinemaRoom created");
+        return null;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    
+    /**
+     * Update an existing cinema room.
+     * @param id The id of the cinema room that will be updated.
+     * @param cinemaRoom The new cinema room that will replace the existing.
+     * @return the new updated cinema room object.
+     */
+    public CinemaRoomService updateCinemaRoom(int id, CinemaRoomService cinemaRoom){
+        System.out.println("CinemaRoom update");
+        return null;
     }
-
-    public boolean isIs3D() {
-        return is3D;
+    
+    /**
+     * Delete an existing cinema room.
+     * @param cinemaRoom The cinema room that will be deleted.
+     * @return The deleted cinema room.
+     */
+    public CinemaRoomService deleteCinemaRoom(CinemaRoomService cinemaRoom){
+        System.out.println("CinemaRoom delete");
+        return null;
     }
-
-    public void setIs3D(boolean is3D) {
-        this.is3D = is3D;
-    }
-
-    public int getTotalSeats() {
-        return totalSeats;
-    }
-
-    public void setTotalSeats(int totalSeats) {
-        this.totalSeats = totalSeats;
+    
+    /**
+     * 
+     * @return an array with all the existing cinema rooms.
+     */
+    public CinemaRoomService[] readAllCinemaRooms(){
+        System.out.println("read all the CinemaRooms");
+        return null;
     }
 }

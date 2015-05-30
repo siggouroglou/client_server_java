@@ -1,53 +1,58 @@
 package gr.papei.mainpackage.server.service;
 
-import gr.papei.mainpackage.server.data.*;
-
 /**
  *
  * @author siggouroglou@gmail.com
  */
 public class FilmService {
-    private int id;
-    private String title;
-    private String category;
-    private String description;
 
     public FilmService() {
-        this.id = -1;
-        this.title = "";
-        this.category = "";
-        this.description = "";
+    }
+    
+    /**
+     * Creates a new film.
+     * @param film The film to be created.
+     * @return the new film object.
+     */
+    public FilmService createFilm(FilmService film){
+        System.out.println("Film created");
+        return null;
+    }
+    
+    /**
+     * Updates an existing film.
+     * @param id The id of the film to be updated.
+     * @param film The new file that will update the existing.
+     * @return the new updated film.
+     */
+    public FilmService updateFilm(int id, FilmService film){
+        System.out.println("Film update");
+        return null;
+    }
+    
+    /**
+     * Delete an existing film.
+     * @param film The film that will be deleted.
+     * @return The deleted film.
+     */
+    public FilmService deleteFilm(FilmService film){
+        System.out.println("Film delete");
+        return null;
+    }
+    
+    /**
+     * 
+     * @return an array with all the available films.
+     */
+    public FilmService[] readAllFilms(){
+        System.out.println("read all the Films");
+        return null;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    /**
+     * Display to the default output (console) all the available films.
+     */
+    public void showAvailableFilms() {
+        System.out.println("Displaying available Films of the customer");
     }
 }

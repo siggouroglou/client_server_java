@@ -1,4 +1,4 @@
-package gr.papei.mainpackage.server.data;
+package gr.papei.mainpackage.server.data.model;
 
 import java.util.Date;
 

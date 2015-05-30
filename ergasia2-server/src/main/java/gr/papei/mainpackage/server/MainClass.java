@@ -1,13 +1,13 @@
 package gr.papei.mainpackage.server;
 
 import com.google.gson.Gson;
-import gr.papei.mainpackage.server.data.Admin;
-import gr.papei.mainpackage.server.data.ContentAdmin;
-import gr.papei.mainpackage.server.data.Film;
-import gr.papei.mainpackage.server.data.CinemaRoom;
-import gr.papei.mainpackage.server.data.Customer;
-import gr.papei.mainpackage.server.data.Provoli;
-import gr.papei.mainpackage.server.data.Reservation;
+import gr.papei.mainpackage.server.data.model.Admin;
+import gr.papei.mainpackage.server.data.model.ContentAdmin;
+import gr.papei.mainpackage.server.data.model.Film;
+import gr.papei.mainpackage.server.data.model.CinemaRoom;
+import gr.papei.mainpackage.server.data.model.Customer;
+import gr.papei.mainpackage.server.data.model.Provoli;
+import gr.papei.mainpackage.server.data.model.Reservation;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -31,14 +31,14 @@ public class MainClass {
         contentAdmin.setName("Athina");
         contentAdmin.setUsername("athina");
         contentAdmin.setPassword("athina91");
-        admin.createUser(contentAdmin);
+//        admin.createUser(contentAdmin);
 
         // Create Customer.
         Customer customer = new Customer();
         customer.setName("Panagiotis Dodekatos");
         customer.setUsername("panagiotis");
         customer.setPassword("panagiotis88");
-        admin.createUser(customer);
+//        admin.createUser(customer);
 
         // ContentAdmin creates a Film.
         Film film = new Film();
@@ -46,14 +46,14 @@ public class MainClass {
         film.setTitle("Taken 3");
         film.setCategory("Action");
         film.setDescription("Very good film.");
-        contentAdmin.createFilm(film);
+//        contentAdmin.createFilm(film);
 
         // ContentAdmin creates a CinemaRoom.
         CinemaRoom cinemaRoom = new CinemaRoom();
         cinemaRoom.setId(1);
         cinemaRoom.setIs3D(true);
         cinemaRoom.setTotalSeats(15);
-        contentAdmin.createCinemaRoom(cinemaRoom);
+//        contentAdmin.createCinemaRoom(cinemaRoom);
 
         // Create a Provoli object.
         Provoli provoli = new Provoli();
@@ -64,10 +64,10 @@ public class MainClass {
         provoli.setEndDate(new Date());
         provoli.setNumberOfReservations(0);
         provoli.setIsAvailable(true);
-        contentAdmin.createProvoli(provoli);
+//        contentAdmin.createProvoli(provoli);
 
         // Add a reservation for the created customer.
-        Reservation reservation = customer.makeReservation(provoli);
+//        Reservation reservation = customer.makeReservation(provoli);
 
         // Export to file.
         try (FileOutputStream fileOutputStream = new FileOutputStream(new File("output.txt"))) {
@@ -77,7 +77,7 @@ public class MainClass {
             writeObjectToOutput(fileOutputStream, film, Film.class);
             writeObjectToOutput(fileOutputStream, cinemaRoom, CinemaRoom.class);
             writeObjectToOutput(fileOutputStream, provoli, Provoli.class);
-            writeObjectToOutput(fileOutputStream, reservation, Reservation.class);
+//            writeObjectToOutput(fileOutputStream, reservation, Reservation.class);
             System.out.println("All the objects saved to file successfully.");
         } catch (IOException ex) {
             ex.printStackTrace();

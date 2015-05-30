@@ -1,33 +1,30 @@
 package gr.papei.mainpackage.server.service;
 
-import gr.papei.mainpackage.server.data.*;
-
 /**
  *
  * @author siggouroglou@gmail.com
  */
 public class ReservationService {
-    private int customerId;
-    private int provoliId;
 
-    public ReservationService(int customerId, int provoliId) {
-        this.customerId = customerId;
-        this.provoliId = provoliId;
+    public ReservationService() {
     }
 
-    public int getCustomerId() {
-        return customerId;
+    /**
+     * Creates a new reservation object.
+     * @param provoli The provoli object that will reserver the current customer.
+     * @return The new reservation that will be created.
+     */
+    public ReservationService makeReservation(ProvoliService provoli) {
+        System.out.println("Making a reservation for the customer");
+        return null;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
-
-    public int getProvoliId() {
-        return provoliId;
-    }
-
-    public void setProvoliId(int provoliId) {
-        this.provoliId = provoliId;
+    /**
+     * 
+     * @return an array of all the reservations of the current customer.
+     */
+    public ReservationService[] readAllReservations() {
+        System.out.println("Reading all the Reservations of the customer");
+        return null;
     }
 }
