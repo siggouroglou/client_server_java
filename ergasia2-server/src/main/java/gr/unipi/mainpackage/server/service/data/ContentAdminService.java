@@ -1,17 +1,19 @@
 package gr.unipi.mainpackage.server.service.data;
 
-import gr.unipi.mainpackage.server.lib.SignInAble;
+import gr.unipi.mainpackage.server.lib.SignInAbleService;
+import gr.unipi.mainpackage.server.lib.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import gr.unipi.mainpackage.server.model.ContentAdmin;
+import java.util.List;
 
 /**
  *
  * @author siggouroglou@gmail.com
  */
-public class ContentAdminService implements SignInAble {
+public class ContentAdminService implements SignInAbleService {
 
     public ContentAdminService() {
         super();
@@ -24,7 +26,7 @@ public class ContentAdminService implements SignInAble {
      * @param user
      * @return
      */
-    public ContentAdmin[] searchContentAdmin(ContentAdmin contentAdmin, AuthorizedUser user) {
+    public List<ContentAdmin> searchContentAdmin(ContentAdmin contentAdmin, AuthorizedUser user) {
         // Check the arguments.
         if (contentAdmin == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -110,9 +112,9 @@ public class ContentAdminService implements SignInAble {
      * @param user
      * @return an array with all the existing contentAdmins.
      */
-    public ContentAdmin[] readAllContentAdmins(AuthorizedUser user) {
+    public List<ContentAdmin> readContentAdmin(ContentAdmin contentAdmin, AuthorizedUser user) {
         // Check the arguments.
-        if (user == null) {
+        if (contentAdmin == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
         }
         // Check the user authorization.
@@ -126,12 +128,12 @@ public class ContentAdminService implements SignInAble {
     }
     
     @Override
-    public boolean login(){
+    public boolean login(SignInAbleUser user){
         return true;
     }
     
     @Override
-    public boolean logout(){
+    public boolean logout(SignInAbleUser user){
         return true;
     }
 

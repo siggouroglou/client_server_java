@@ -4,6 +4,7 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
+import java.util.List;
 
 /**
  *
@@ -30,7 +31,7 @@ public class CinemaRoomService {
         if (!AuthorityUtils.hasAuthority(Authority.CinemaRoom_C, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         System.out.println("CinemaRoom created");
         return null;
@@ -53,7 +54,7 @@ public class CinemaRoomService {
         if (!AuthorityUtils.hasAuthority(Authority.CinemaRoom_U, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         System.out.println("CinemaRoom update");
         return null;
@@ -75,7 +76,7 @@ public class CinemaRoomService {
         if (!AuthorityUtils.hasAuthority(Authority.CinemaRoom_D, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         System.out.println("CinemaRoom delete");
         return null;
@@ -83,19 +84,20 @@ public class CinemaRoomService {
 
     /**
      *
+     * @param cinemaRoom
      * @param user
      * @return an array with all the existing cinema rooms.
      */
-    public CinemaRoomService[] readAllCinemaRooms(AuthorizedUser user) {
+    public List<CinemaRoomService> readCinemaRoom(CinemaRoomService cinemaRoom, AuthorizedUser user) {
         // Check the arguments.
-        if (user == null) {
+        if (cinemaRoom == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
         }
         // Check the user authorization.
         if (!AuthorityUtils.hasAuthority(Authority.CinemaRoom_R, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         System.out.println("Read all the CinemaRooms");
         return null;

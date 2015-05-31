@@ -4,6 +4,7 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
+import java.util.List;
 
 /**
  *
@@ -83,12 +84,13 @@ public class FilmService {
 
     /**
      *
+     * @param film
      * @param user
      * @return an array with all the available films.
      */
-    public FilmService[] readAllFilms(AuthorizedUser user) {
+    public List<FilmService> readFilm(FilmService film, AuthorizedUser user) {
         // Check the arguments.
-        if (user == null) {
+        if (film == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
         }
         // Check the user authorization.

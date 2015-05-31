@@ -1,0 +1,8 @@
+2015-05-31 14:07:42 DEBUG MainServer:26 - Open the network port.
+2015-05-31 14:07:42 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 14:07:42 DEBUG MainServer:36 - Waiting for a connection.
+2015-05-31 14:07:54 DEBUG MainServer:39 - Manage the connection to another thread.
+2015-05-31 14:07:54 DEBUG MainServer:36 - Waiting for a connection.
+2015-05-31 14:07:54 DEBUG ClientManager:29 - Check the socket state.
+2015-05-31 14:07:54 DEBUG ClientManager:35 - Read the request.
+2015-05-31 14:07:54 DEBUG ClientManager:45 - Manage the command requested.

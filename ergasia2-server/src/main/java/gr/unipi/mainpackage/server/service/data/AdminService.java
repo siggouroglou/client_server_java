@@ -1,6 +1,7 @@
 package gr.unipi.mainpackage.server.service.data;
 
-import gr.unipi.mainpackage.server.lib.SignInAble;
+import gr.unipi.mainpackage.server.lib.SignInAbleService;
+import gr.unipi.mainpackage.server.lib.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
@@ -11,7 +12,7 @@ import gr.unipi.mainpackage.server.model.Admin;
  *
  * @author siggouroglou@gmail.com
  */
-public class AdminService implements SignInAble {
+public class AdminService implements SignInAbleService {
 
     public AdminService() {
     }
@@ -106,12 +107,13 @@ public class AdminService implements SignInAble {
 
     /**
      *
+     * @param admin
      * @param user
      * @return an array with all the existing admins.
      */
-    public Admin[] readAllAdmins(AuthorizedUser user) {
+    public Admin[] readAdmin(Admin admin, AuthorizedUser user) {
         // Check the arguments.
-        if (user == null) {
+        if (admin == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
         }
         // Check the user authorization.
@@ -125,12 +127,12 @@ public class AdminService implements SignInAble {
     }
     
     @Override
-    public boolean login(){
+    public boolean login(SignInAbleUser user){
         return true;
     }
     
     @Override
-    public boolean logout(){
+    public boolean logout(SignInAbleUser user){
         return true;
     }
 

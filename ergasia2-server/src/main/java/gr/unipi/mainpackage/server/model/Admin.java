@@ -1,5 +1,6 @@
 package gr.unipi.mainpackage.server.model;
 
+import gr.unipi.mainpackage.server.lib.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.Authority;
 import static gr.unipi.mainpackage.server.lib.authority.Authority.*;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
@@ -10,7 +11,7 @@ import java.util.List;
  *
  * @author siggouroglou@gmail.com
  */
-public class Admin implements AuthorizedUser {
+public class Admin implements AuthorizedUser, SignInAbleUser {
 
     private String name;
     private String username;
@@ -30,6 +31,7 @@ public class Admin implements AuthorizedUser {
         this.name = name;
     }
 
+    @Override
     public String getUsername() {
         return username;
     }
@@ -38,6 +40,7 @@ public class Admin implements AuthorizedUser {
         this.username = username;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }

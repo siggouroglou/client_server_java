@@ -4,6 +4,7 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
+import java.util.List;
 
 /**
  *
@@ -80,12 +81,13 @@ public class ProvoliService {
     
     /**
      * 
+     * @param provoli
      * @param user
      * @return an array of provoli objects.
      */
-    public ProvoliService[] readAllProvoli(AuthorizedUser user) {
+    public List<ProvoliService> readProvoli(ProvoliService provoli, AuthorizedUser user) {
         // Check the arguments.
-        if (user == null) {
+        if (provoli == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
         }
         // Check the user authorization.

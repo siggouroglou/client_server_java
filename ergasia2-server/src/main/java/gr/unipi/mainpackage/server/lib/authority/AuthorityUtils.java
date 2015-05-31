@@ -15,7 +15,7 @@ public class AuthorityUtils {
     public static boolean hasAuthority(Authority authority, AuthorizedUser authorizedUser) {
         // Check the arguments.
         if (authority == null || authorizedUser == null) {
-            throw new IllegalArgumentException("Null arguments are not supported.");
+            return false;
         }
         
         // Flas to intigate if this user is authorized.

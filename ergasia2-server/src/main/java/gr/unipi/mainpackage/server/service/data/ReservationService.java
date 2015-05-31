@@ -4,7 +4,7 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
-import gr.unipi.mainpackage.server.model.Customer;
+import java.util.List;
 
 /**
  *
@@ -22,9 +22,9 @@ public class ReservationService {
      * @param user
      * @return The new reservation that will be created.
      */
-    public ReservationService makeReservation(ProvoliService provoli, Customer customer, AuthorizedUser user) {
+    public ReservationService createReservation(ProvoliService provoli, AuthorizedUser user) {
         // Check the arguments.
-        if (customer == null || provoli == null || user == null) {
+        if (provoli == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
         }
         // Check the user authorization.
@@ -39,10 +39,11 @@ public class ReservationService {
 
     /**
      * 
+     * @param provoli
      * @param user
      * @return an array of all the reservations of the current customer.
      */
-    public ReservationService[] readAllReservations(AuthorizedUser user) {
+    public List<ReservationService> readReservation(ProvoliService provoli, AuthorizedUser user) {
         // Check the arguments.
         if (user == null) {
             throw new IllegalArgumentException("Null arguments.");

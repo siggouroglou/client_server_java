@@ -1,17 +1,19 @@
 package gr.unipi.mainpackage.server.service.data;
 
-import gr.unipi.mainpackage.server.lib.SignInAble;
+import gr.unipi.mainpackage.server.lib.SignInAbleService;
+import gr.unipi.mainpackage.server.lib.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import gr.unipi.mainpackage.server.model.Customer;
+import java.util.List;
 
 /**
  *
  * @author siggouroglou@gmail.com
  */
-public class CustomerService implements SignInAble {
+public class CustomerService implements SignInAbleService {
 
     public CustomerService() {
         super();
@@ -24,7 +26,7 @@ public class CustomerService implements SignInAble {
      * @param user 
      * @return
      */
-    public Customer[] searchCustomer(Customer customer, AuthorizedUser user) {
+    public List<Customer> searchCustomer(Customer customer, AuthorizedUser user) {
         // Check the arguments.
         if (customer == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -107,12 +109,13 @@ public class CustomerService implements SignInAble {
 
     /**
      *
+     * @param customer
      * @param user
      * @return an array with all the existing users.
      */
-    public Customer[] readAllUsers(AuthorizedUser user) {
+    public List<Customer> readCustomer(Customer customer, AuthorizedUser user) {
         // Check the arguments.
-        if (user == null) {
+        if (customer == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
         }
         // Check the user authorization.
@@ -126,12 +129,12 @@ public class CustomerService implements SignInAble {
     }
     
     @Override
-    public boolean login(){
+    public boolean login(SignInAbleUser user){
         return true;
     }
     
     @Override
-    public boolean logout(){
+    public boolean logout(SignInAbleUser user){
         return true;
     }
 }

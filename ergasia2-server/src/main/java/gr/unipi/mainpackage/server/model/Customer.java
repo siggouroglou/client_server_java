@@ -1,36 +1,8 @@
 package gr.unipi.mainpackage.server.model;
 
+import gr.unipi.mainpackage.server.lib.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.Authority;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.CinemaRoom_C;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.CinemaRoom_D;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.CinemaRoom_R;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.CinemaRoom_S;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.CinemaRoom_U;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.ContentAdmin_C;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.ContentAdmin_D;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.ContentAdmin_R;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.ContentAdmin_S;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.ContentAdmin_U;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Customer_C;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Customer_D;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Customer_R;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Customer_S;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Customer_U;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Film_C;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Film_D;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Film_R;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Film_S;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Film_U;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Provoli_C;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Provoli_D;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Provoli_R;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Provoli_S;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Provoli_U;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Reservation_C;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Reservation_D;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Reservation_R;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Reservation_S;
-import static gr.unipi.mainpackage.server.lib.authority.Authority.Reservation_U;
+import static gr.unipi.mainpackage.server.lib.authority.Authority.*;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import java.util.Arrays;
 import java.util.List;
@@ -39,7 +11,7 @@ import java.util.List;
  *
  * @author siggouroglou@gmail.com
  */
-public class Customer implements AuthorizedUser {
+public class Customer implements AuthorizedUser, SignInAbleUser {
 
     private String name;
     private String username;
@@ -59,6 +31,7 @@ public class Customer implements AuthorizedUser {
         this.name = name;
     }
 
+    @Override
     public String getUsername() {
         return username;
     }
@@ -67,6 +40,7 @@ public class Customer implements AuthorizedUser {
         this.username = username;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
