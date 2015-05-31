@@ -1,7 +1,15 @@
 package gr.unipi.mainpackage.server.service.fileManager;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import gr.unipi.mainpackage.server.model.data.Reservation;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -14,9 +22,24 @@ import java.util.List;
  */
 public class ReservationDbFileManager implements DbFileManager<Reservation> {
 
+    private static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(ReservationDbFileManager.class);
+    private static final String DB_PATH = "database/Reservation.db";
+
     @Override
-    public synchronized Reservation create(Reservation t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Reservation create(Reservation reservation) {
+        // Get all the admins from file.
+        List<Reservation> dbList = readOrWriteToFile(null);
+
+        // Add the new one.
+        dbList.add(reservation);
+
+        // Get the distinct admin List.
+        List<Reservation> distinctList = dbList.stream().distinct().collect(Collectors.toList());
+
+        // Save them back to file.
+        readOrWriteToFile(distinctList);
+
+        return reservation;
     }
 
     @Override
@@ -30,13 +53,45 @@ public class ReservationDbFileManager implements DbFileManager<Reservation> {
     }
 
     @Override
-    public synchronized Reservation update(Reservation t) {
+    public Reservation update(Reservation t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public synchronized Reservation delete(Reservation t) {
+    public Reservation delete(Reservation t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private synchronized List<Reservation> readOrWriteToFile(List<Reservation> writeList) {
+        Gson gson = new GsonBuilder()
+                .setDateFormat("dd.MM.yyyy")
+                .create();
+
+        // Case when reading.
+        if (writeList == null) {
+            try {
+                String readJson = new String(Files.readAllBytes(Paths.get(DB_PATH)), "utf-8");
+                Reservation[] array = gson.fromJson(readJson, Reservation[].class);
+                if (array == null) {
+                    return new ArrayList<>();
+                } else {
+                    return Arrays.asList(array);
+                }
+            } catch (Exception ex) {
+                logger.error("DB Reservation file didn't read.", ex);
+            }
+        }
+
+        // Case when writing.
+        if (writeList != null) {
+            try {
+                Files.write(Paths.get(DB_PATH), gson.toJson(writeList.toArray(), Reservation[].class).getBytes("utf-8"));
+            } catch (IOException ex) {
+                logger.error("DB Reservation file didn't writen.", ex);
+            }
+        }
+
+        return null;
     }
 
 }

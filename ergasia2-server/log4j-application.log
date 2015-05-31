@@ -6,3 +6,412 @@
 2015-05-31 14:07:54 DEBUG ClientManager:29 - Check the socket state.
 2015-05-31 14:07:54 DEBUG ClientManager:35 - Read the request.
 2015-05-31 14:07:54 DEBUG ClientManager:45 - Manage the command requested.
+2015-05-31 17:50:07 DEBUG MainServer:30 - Open the network port.
+2015-05-31 17:50:07 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:50:13 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:50:23 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 17:50:27 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:50:42 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 17:50:47 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 17:53:08 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 17:53:11 FATAL ClientManager:128 - Request entity was not valid.
+java.lang.NullPointerException
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:118)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 17:53:14 DEBUG ClientManager:307 - Sending an error message: Request entity was not valid.
+2015-05-31 17:53:19 FATAL ClientManager:311 - Sending an error message FAILED: {"errorMessage":"Request entity was not valid."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:308)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:129)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 17:53:20 DEBUG ClientManager:320 - Close the connection.
+2015-05-31 17:53:57 DEBUG MainServer:30 - Open the network port.
+2015-05-31 17:53:57 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:53:57 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:54:02 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 17:54:02 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:54:16 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 17:54:19 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 17:55:35 DEBUG MainServer:30 - Open the network port.
+2015-05-31 17:55:35 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:55:35 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:55:37 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 17:55:37 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:55:41 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 17:55:45 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 17:56:07 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 17:56:18 FATAL ClientManager:128 - Request entity was not valid.
+java.lang.ClassNotFoundException: gr.unipi.mainpackage.server.model.Admin
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:260)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:126)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 17:56:22 DEBUG ClientManager:307 - Sending an error message: Request entity was not valid.
+2015-05-31 17:56:26 FATAL ClientManager:311 - Sending an error message FAILED: {"errorMessage":"Request entity was not valid."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:308)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:129)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 17:56:28 DEBUG ClientManager:320 - Close the connection.
+2015-05-31 17:57:36 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 17:57:36 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:57:40 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 17:57:43 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 17:57:53 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 17:58:31 DEBUG MainServer:30 - Open the network port.
+2015-05-31 17:58:31 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:58:31 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:58:40 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 17:58:40 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 17:58:40 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 17:58:40 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 17:59:06 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 17:59:18 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 17:59:35 DEBUG ClientManager:191 - Get the data management method.
+2015-05-31 17:59:54 DEBUG ClientManager:204 - Wrap the output to Reponse model.
+2015-05-31 18:03:15 FATAL ClientManager:216 - Request method was not valid while requested to run.
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:208)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 18:03:17 DEBUG ClientManager:307 - Sending an error message: Request method was not valid while requested to run.
+2015-05-31 18:03:17 FATAL ClientManager:311 - Sending an error message FAILED: {"errorMessage":"Request method was not valid while requested to run."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:308)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:217)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 18:03:18 DEBUG ClientManager:320 - Close the connection.
+2015-05-31 18:03:35 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 18:03:35 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:03:35 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 18:03:35 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 18:03:35 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 18:03:35 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 18:03:44 DEBUG MainServer:30 - Open the network port.
+2015-05-31 18:03:44 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:03:44 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:03:57 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 18:03:57 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:03:57 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 18:03:57 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 18:03:57 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 18:03:57 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 18:04:04 DEBUG ClientManager:191 - Get the data management method.
+2015-05-31 18:04:05 DEBUG ClientManager:204 - Wrap the output to Reponse model.
+2015-05-31 18:05:06 DEBUG MainServer:30 - Open the network port.
+2015-05-31 18:05:06 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:05:06 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:05:12 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 18:05:12 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:05:12 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 18:05:12 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 18:05:13 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 18:05:13 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 18:05:15 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 18:05:16 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 18:06:24 DEBUG MainServer:30 - Open the network port.
+2015-05-31 18:06:24 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:06:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:06:36 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 18:06:36 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:06:36 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 18:06:36 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 18:06:36 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 18:06:36 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 18:06:42 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 18:06:42 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 18:07:44 DEBUG MainServer:30 - Open the network port.
+2015-05-31 18:07:44 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:07:44 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:07:47 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 18:07:47 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:07:47 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 18:07:47 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 18:07:47 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 18:07:47 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 18:07:47 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 18:07:47 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 18:09:02 FATAL ClientManager:217 - Request method was not valid while requested to run.
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:209)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 18:09:04 DEBUG ClientManager:308 - Sending an error message: Request method was not valid while requested to run.
+2015-05-31 18:09:04 FATAL ClientManager:312 - Sending an error message FAILED: {"errorMessage":"Request method was not valid while requested to run."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:309)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:218)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 18:09:04 DEBUG ClientManager:321 - Close the connection.
+2015-05-31 18:15:18 DEBUG MainServer:30 - Open the network port.
+2015-05-31 18:15:18 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:15:18 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:15:21 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 18:15:21 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 18:15:21 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 18:15:21 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 18:15:21 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 18:15:21 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 18:15:21 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 18:15:21 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 18:15:52 DEBUG ClientManager:284 - Sending response.
+2015-05-31 18:15:56 FATAL ClientManager:288 - Sending response FAILED ( {"response":"null"})
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendResponse(ClientManager.java:285)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:68)
+2015-05-31 20:38:44 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 20:38:44 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 20:38:44 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 20:38:44 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 20:38:49 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 20:38:49 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 20:38:49 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 20:38:49 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 20:39:00 DEBUG ClientManager:284 - Sending response.
+2015-05-31 20:39:00 FATAL ClientManager:288 - Sending response FAILED ( {"response":"null"})
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendResponse(ClientManager.java:285)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:68)
+2015-05-31 20:39:26 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 20:39:26 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 20:39:26 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 20:39:26 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 20:39:28 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 20:39:28 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 20:39:28 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 20:39:28 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 20:39:37 DEBUG ClientManager:284 - Sending response.
+2015-05-31 20:39:37 FATAL ClientManager:288 - Sending response FAILED ( {"response":"null"})
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendResponse(ClientManager.java:285)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:68)
+2015-05-31 20:39:51 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 20:39:51 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 20:39:51 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 20:39:51 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 20:39:53 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 20:39:53 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 20:39:53 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 20:39:53 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 20:39:53 DEBUG ClientManager:284 - Sending response.
+2015-05-31 20:39:53 FATAL ClientManager:288 - Sending response FAILED ( {"response":"null"})
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendResponse(ClientManager.java:285)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:68)
+2015-05-31 21:03:29 DEBUG MainServer:30 - Open the network port.
+2015-05-31 21:03:29 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:03:29 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:03:39 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 21:03:39 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:03:39 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 21:03:39 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 21:03:39 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 21:03:39 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 21:03:39 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 21:03:39 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 21:03:59 FATAL ClientManager:217 - Request method was not valid while requested to run.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:209)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:203)
+	at java.util.Arrays$ArrayList.<init>(Arrays.java:3813)
+	at java.util.Arrays.asList(Arrays.java:3800)
+	at gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager.readOrWriteToFile(AdminDbFileManager.java:78)
+	at gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager.create(AdminDbFileManager.java:35)
+	at gr.unipi.mainpackage.server.service.data.AdminService.createAdmin(AdminService.java:64)
+	... 7 more
+2015-05-31 21:04:03 DEBUG ClientManager:308 - Sending an error message: Request method was not valid while requested to run.
+2015-05-31 21:04:03 FATAL ClientManager:312 - Sending an error message FAILED: {"errorMessage":"Request method was not valid while requested to run."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:309)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:218)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 21:04:03 DEBUG ClientManager:321 - Close the connection.
+2015-05-31 21:04:07 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 21:04:07 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:04:07 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 21:04:07 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 21:04:07 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 21:04:07 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 21:04:07 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 21:04:07 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 21:04:17 FATAL ClientManager:217 - Request method was not valid while requested to run.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:209)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:203)
+	at java.util.Arrays$ArrayList.<init>(Arrays.java:3813)
+	at java.util.Arrays.asList(Arrays.java:3800)
+	at gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager.readOrWriteToFile(AdminDbFileManager.java:78)
+	at gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager.create(AdminDbFileManager.java:35)
+	at gr.unipi.mainpackage.server.service.data.AdminService.createAdmin(AdminService.java:64)
+	... 7 more
+2015-05-31 21:04:17 DEBUG ClientManager:308 - Sending an error message: Request method was not valid while requested to run.
+2015-05-31 21:04:17 FATAL ClientManager:312 - Sending an error message FAILED: {"errorMessage":"Request method was not valid while requested to run."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:309)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:218)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 21:04:17 DEBUG ClientManager:321 - Close the connection.
+2015-05-31 21:05:35 DEBUG MainServer:30 - Open the network port.
+2015-05-31 21:05:35 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:05:35 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:05:37 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 21:05:37 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:05:37 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 21:05:37 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 21:05:37 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 21:05:37 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 21:05:37 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 21:05:37 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 21:05:56 FATAL ClientManager:217 - Request method was not valid while requested to run.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:209)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+Caused by: java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:203)
+	at java.util.Arrays$ArrayList.<init>(Arrays.java:3813)
+	at java.util.Arrays.asList(Arrays.java:3800)
+	at gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager.readOrWriteToFile(AdminDbFileManager.java:83)
+	at gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager.create(AdminDbFileManager.java:35)
+	at gr.unipi.mainpackage.server.service.data.AdminService.createAdmin(AdminService.java:64)
+	... 7 more
+2015-05-31 21:05:56 DEBUG ClientManager:308 - Sending an error message: Request method was not valid while requested to run.
+2015-05-31 21:05:56 FATAL ClientManager:312 - Sending an error message FAILED: {"errorMessage":"Request method was not valid while requested to run."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:309)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:218)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 21:05:56 DEBUG ClientManager:321 - Close the connection.
+2015-05-31 21:06:34 DEBUG MainServer:30 - Open the network port.
+2015-05-31 21:06:34 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:06:34 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:06:37 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 21:06:37 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:06:37 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 21:06:37 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 21:06:37 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 21:06:37 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 21:06:37 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 21:06:37 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 21:06:45 FATAL ClientManager:217 - Request method was not valid while requested to run.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:209)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+Caused by: java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(AbstractList.java:148)
+	at java.util.AbstractList.add(AbstractList.java:108)
+	at gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager.create(AdminDbFileManager.java:38)
+	at gr.unipi.mainpackage.server.service.data.AdminService.createAdmin(AdminService.java:64)
+	... 7 more
+2015-05-31 21:06:45 DEBUG ClientManager:308 - Sending an error message: Request method was not valid while requested to run.
+2015-05-31 21:06:45 FATAL ClientManager:312 - Sending an error message FAILED: {"errorMessage":"Request method was not valid while requested to run."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:309)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:218)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 21:06:45 DEBUG ClientManager:321 - Close the connection.
+2015-05-31 21:06:52 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 21:06:52 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:06:52 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 21:06:52 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 21:06:52 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 21:06:52 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 21:06:52 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 21:06:52 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 21:07:10 FATAL ClientManager:217 - Request method was not valid while requested to run.
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:209)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+Caused by: java.lang.UnsupportedOperationException
+	at java.util.AbstractList.add(AbstractList.java:148)
+	at java.util.AbstractList.add(AbstractList.java:108)
+	at gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager.create(AdminDbFileManager.java:38)
+	at gr.unipi.mainpackage.server.service.data.AdminService.createAdmin(AdminService.java:64)
+	... 7 more
+2015-05-31 21:07:10 DEBUG ClientManager:308 - Sending an error message: Request method was not valid while requested to run.
+2015-05-31 21:07:10 FATAL ClientManager:312 - Sending an error message FAILED: {"errorMessage":"Request method was not valid while requested to run."}
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendError(ClientManager.java:309)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest_data(ClientManager.java:218)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.manageRequest(ClientManager.java:147)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:63)
+2015-05-31 21:07:10 DEBUG ClientManager:321 - Close the connection.
+2015-05-31 21:08:15 DEBUG MainServer:30 - Open the network port.
+2015-05-31 21:08:15 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:08:15 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:09:37 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-05-31 21:09:37 DEBUG MainServer:40 - Waiting for a connection.
+2015-05-31 21:09:37 DEBUG ClientManager:47 - Check the socket state.
+2015-05-31 21:09:37 DEBUG ClientManager:86 - Reading the request.
+2015-05-31 21:09:37 DEBUG ClientManager:113 - Get the model and service instances.
+2015-05-31 21:09:37 DEBUG ClientManager:146 - Data management method detected.
+2015-05-31 21:09:37 DEBUG ClientManager:192 - Get the data management method.
+2015-05-31 21:09:37 DEBUG ClientManager:205 - Wrap the output to Reponse model.
+2015-05-31 21:09:45 DEBUG ClientManager:284 - Sending response.
+2015-05-31 21:09:45 FATAL ClientManager:288 - Sending response FAILED ( {"response":"{\"name\":\"George Siggouroglou\",\"username\":\"siggouroglou\",\"password\":\"EFE6398127928F1B2E9EF3207FB82663\"}"})
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:943)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.sendResponse(ClientManager.java:285)
+	at gr.unipi.mainpackage.server.service.server.ClientManager.run(ClientManager.java:68)

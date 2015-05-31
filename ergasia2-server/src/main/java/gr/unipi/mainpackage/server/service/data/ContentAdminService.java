@@ -7,6 +7,7 @@ import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import gr.unipi.mainpackage.server.model.data.ContentAdmin;
+import gr.unipi.mainpackage.server.service.fileManager.ContentAdminDbFileManager;
 import java.util.List;
 
 /**
@@ -17,11 +18,12 @@ import java.util.List;
  * @author siggouroglou@gmail.com
  */
 public class ContentAdminService implements SignInAbleService {
+    ContentAdminDbFileManager dbManager;
 
     public ContentAdminService() {
-        super();
+        dbManager = new ContentAdminDbFileManager();
     }
-
+    
     /**
      *
      * @param contentAdmin The object that includes the criteria that will be used for
@@ -61,8 +63,9 @@ public class ContentAdminService implements SignInAbleService {
         }
         
         // Implement the code.
-        System.out.println("ContentAdmin created");
-        return null;
+        ContentAdmin contentAdminNew = dbManager.create(contentAdmin);
+        
+        return contentAdminNew;
     }
 
     /**

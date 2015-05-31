@@ -1,11 +1,12 @@
 package gr.unipi.mainpackage.client;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.rmi.UnknownHostException;
+import gr.unipi.mainpackage.client.lib.Encryption;
+import gr.unipi.mainpackage.client.model.data.Admin;
+import gr.unipi.mainpackage.client.scenario.AdminCreateScenario;
+import gr.unipi.mainpackage.client.scenario.Scenario;
+import gr.unipi.mainpackage.client.service.ClientManager;
+import java.util.ArrayList;
+import java.util.List;
 import org.apache.log4j.Logger;
 
 /**
@@ -17,25 +18,17 @@ public class StartUp {
     private static final Logger logger = Logger.getLogger(StartUp.class);
 
     public static void main(String[] args) {
-        // Try to connect.
-        try {
-            Socket socket = new Socket("localhost", 55555);
-            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
-            logger.debug("Sending no 1.");
-            out.println("1");
-            logger.debug("Sending no 2.");
-            out.println("2");
-            logger.debug("Sending no 3.");
-            out.println("3");
-            logger.debug("Sending no 4.");
-            out.println("4");
-        } catch (UnknownHostException ex) {
-            logger.error("NUnknown host: localhost", ex);
-        } catch (IOException ex) {
-            logger.error("No I/O", ex);
-        }
-        logger.debug("Completed.");
+        // Create the admin scenatio.
+        Admin admin = new Admin();
+        admin.setName("George Siggouroglou");
+        admin.setUsername("siggouroglou");
+        admin.setPassword(Encryption.getHashMD5("qweqwe"));
+        
+        List<Scenario> scenarioList = new ArrayList<>(1);
+        scenarioList.add(new AdminCreateScenario(admin, 1));
+        
+        // Make the request.
+        ClientManager clientManager = new ClientManager(scenarioList);
+        clientManager.start();
     }
 }

@@ -7,6 +7,7 @@ import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import gr.unipi.mainpackage.server.model.data.Customer;
+import gr.unipi.mainpackage.server.service.fileManager.CustomerDbFileManager;
 import java.util.List;
 
 /**
@@ -17,9 +18,10 @@ import java.util.List;
  * @author siggouroglou@gmail.com
  */
 public class CustomerService implements SignInAbleService {
+    CustomerDbFileManager dbManager;
 
     public CustomerService() {
-        super();
+        dbManager = new CustomerDbFileManager();
     }
 
     /**
@@ -61,8 +63,9 @@ public class CustomerService implements SignInAbleService {
         }
         
         // Implement the code.
-        System.out.println("User created");
-        return null;
+        Customer customerNew = dbManager.create(customer);
+        
+        return customerNew;
     }
 
     /**

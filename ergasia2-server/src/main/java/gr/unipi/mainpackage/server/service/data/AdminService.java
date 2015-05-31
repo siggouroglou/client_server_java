@@ -7,6 +7,7 @@ import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import gr.unipi.mainpackage.server.model.data.Admin;
+import gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager;
 
 /**
  * Database methods for model Admin.
@@ -15,8 +16,10 @@ import gr.unipi.mainpackage.server.model.data.Admin;
  * @author siggouroglou@gmail.com
  */
 public class AdminService implements SignInAbleService {
+    AdminDbFileManager dbManager;
 
     public AdminService() {
+        dbManager = new AdminDbFileManager();
     }
 
     /**
@@ -58,8 +61,9 @@ public class AdminService implements SignInAbleService {
         }
         
         // Implement the code.
-        System.out.println("Admin created");
-        return null;
+        Admin adminNew = dbManager.create(admin);
+        
+        return adminNew;
     }
 
     /**

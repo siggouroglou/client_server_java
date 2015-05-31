@@ -1,7 +1,15 @@
 package gr.unipi.mainpackage.server.service.fileManager;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import gr.unipi.mainpackage.server.model.data.Provoli;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * This class implement the database insert/update/delete and select methods.
@@ -13,9 +21,24 @@ import java.util.List;
  */
 public class ProvoliDbFileManager implements DbFileManager<Provoli> {
 
+    private static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(ProvoliDbFileManager.class);
+    private static final String DB_PATH = "database/Provoli.db";
+
     @Override
-    public synchronized Provoli create(Provoli t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Provoli create(Provoli provoli) {
+        // Get all the admins from file.
+        List<Provoli> dbList = readOrWriteToFile(null);
+
+        // Add the new one.
+        dbList.add(provoli);
+
+        // Get the distinct admin List.
+        List<Provoli> distinctList = dbList.stream().distinct().collect(Collectors.toList());
+
+        // Save them back to file.
+        readOrWriteToFile(distinctList);
+
+        return provoli;
     }
 
     @Override
@@ -29,13 +52,45 @@ public class ProvoliDbFileManager implements DbFileManager<Provoli> {
     }
 
     @Override
-    public synchronized Provoli update(Provoli t) {
+    public Provoli update(Provoli t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public synchronized Provoli delete(Provoli t) {
+    public Provoli delete(Provoli t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private synchronized List<Provoli> readOrWriteToFile(List<Provoli> writeList) {
+        Gson gson = new GsonBuilder()
+                .setDateFormat("dd.MM.yyyy")
+                .create();
+
+        // Case when reading.
+        if (writeList == null) {
+            try {
+                String readJson = new String(Files.readAllBytes(Paths.get(DB_PATH)), "utf-8");
+                Provoli[] array = gson.fromJson(readJson, Provoli[].class);
+                if (array == null) {
+                    return new ArrayList<>();
+                } else {
+                    return Arrays.asList(array);
+                }
+            } catch (Exception ex) {
+                logger.error("DB Provoli file didn't read.", ex);
+            }
+        }
+
+        // Case when writing.
+        if (writeList != null) {
+            try {
+                Files.write(Paths.get(DB_PATH), gson.toJson(writeList.toArray(), Provoli[].class).getBytes("utf-8"));
+            } catch (IOException ex) {
+                logger.error("DB Provoli file didn't writen.", ex);
+            }
+        }
+
+        return null;
     }
 
 }

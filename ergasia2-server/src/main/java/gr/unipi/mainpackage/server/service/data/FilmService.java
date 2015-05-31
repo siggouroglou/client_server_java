@@ -4,6 +4,8 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
+import gr.unipi.mainpackage.server.model.data.Film;
+import gr.unipi.mainpackage.server.service.fileManager.FilmDbFileManager;
 import java.util.List;
 
 /**
@@ -14,8 +16,10 @@ import java.util.List;
  * @author siggouroglou@gmail.com
  */
 public class FilmService {
+    FilmDbFileManager dbManager;
 
     public FilmService() {
+        dbManager = new FilmDbFileManager();
     }
 
     /**
@@ -25,7 +29,7 @@ public class FilmService {
      * @param user
      * @return the new film object.
      */
-    public FilmService createFilm(FilmService film, AuthorizedUser user) {
+    public Film createFilm(Film film, AuthorizedUser user) {
         // Check the arguments.
         if (film == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -34,10 +38,11 @@ public class FilmService {
         if (!AuthorityUtils.hasAuthority(Authority.Film_C, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-
+        
         // Implement the code.
-        System.out.println("Film created");
-        return null;
+        Film filmNew = dbManager.create(film);
+        
+        return filmNew;
     }
 
     /**
@@ -48,7 +53,7 @@ public class FilmService {
      * @param user
      * @return the new updated film.
      */
-    public FilmService updateFilm(int id, FilmService film, AuthorizedUser user) {
+    public Film updateFilm(int id, Film film, AuthorizedUser user) {
         // Check the arguments.
         if (film == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -59,7 +64,7 @@ public class FilmService {
         }
 
         // Implement the code.
-        System.out.println("Film update");
+        System.out.println("Film created");
         return null;
     }
 
@@ -70,7 +75,7 @@ public class FilmService {
      * @param user
      * @return The deleted film.
      */
-    public FilmService deleteFilm(FilmService film, AuthorizedUser user) {
+    public Film deleteFilm(Film film, AuthorizedUser user) {
         // Check the arguments.
         if (film == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -91,7 +96,7 @@ public class FilmService {
      * @param user
      * @return an array with all the available films.
      */
-    public List<FilmService> readFilm(FilmService film, AuthorizedUser user) {
+    public List<Film> readFilm(Film film, AuthorizedUser user) {
         // Check the arguments.
         if (film == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");

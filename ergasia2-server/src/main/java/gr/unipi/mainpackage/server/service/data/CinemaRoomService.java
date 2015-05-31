@@ -4,6 +4,8 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
+import gr.unipi.mainpackage.server.model.data.CinemaRoom;
+import gr.unipi.mainpackage.server.service.fileManager.CinemaRoomDbFileManager;
 import java.util.List;
 
 /**
@@ -13,8 +15,10 @@ import java.util.List;
  * @author siggouroglou@gmail.com
  */
 public class CinemaRoomService {
+    CinemaRoomDbFileManager dbManager;
 
     public CinemaRoomService() {
+        dbManager = new CinemaRoomDbFileManager();
     }
 
     /**
@@ -24,7 +28,7 @@ public class CinemaRoomService {
      * @param user
      * @return the new cinema room object.
      */
-    public CinemaRoomService createCinemaRoom(CinemaRoomService cinemaRoom, AuthorizedUser user) {
+    public CinemaRoom createCinemaRoom(CinemaRoom cinemaRoom, AuthorizedUser user) {
         // Check the arguments.
         if (cinemaRoom == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -33,10 +37,11 @@ public class CinemaRoomService {
         if (!AuthorityUtils.hasAuthority(Authority.CinemaRoom_C, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-
+        
         // Implement the code.
-        System.out.println("CinemaRoom created");
-        return null;
+        CinemaRoom cinemaRoomNew = dbManager.create(cinemaRoom);
+        
+        return cinemaRoomNew;
     }
 
     /**
@@ -47,7 +52,7 @@ public class CinemaRoomService {
      * @param user
      * @return the new updated cinema room object.
      */
-    public CinemaRoomService updateCinemaRoom(int id, CinemaRoomService cinemaRoom, AuthorizedUser user) {
+    public CinemaRoom updateCinemaRoom(int id, CinemaRoom cinemaRoom, AuthorizedUser user) {
         // Check the arguments.
         if (cinemaRoom == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -69,7 +74,7 @@ public class CinemaRoomService {
      * @param user
      * @return The deleted cinema room.
      */
-    public CinemaRoomService deleteCinemaRoom(CinemaRoomService cinemaRoom, AuthorizedUser user) {
+    public CinemaRoom deleteCinemaRoom(CinemaRoom cinemaRoom, AuthorizedUser user) {
         // Check the arguments.
         if (cinemaRoom == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -90,7 +95,7 @@ public class CinemaRoomService {
      * @param user
      * @return an array with all the existing cinema rooms.
      */
-    public List<CinemaRoomService> readCinemaRoom(CinemaRoomService cinemaRoom, AuthorizedUser user) {
+    public List<CinemaRoom> readCinemaRoom(CinemaRoom cinemaRoom, AuthorizedUser user) {
         // Check the arguments.
         if (cinemaRoom == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");

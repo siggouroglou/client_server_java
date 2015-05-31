@@ -2,6 +2,7 @@ package gr.unipi.mainpackage.server.service.server;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import gr.unipi.mainpackage.server.lib.PropertiesUtilities;
 import gr.unipi.mainpackage.server.lib.signin.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import gr.unipi.mainpackage.server.lib.session.AuthorizationModel;
@@ -19,6 +20,7 @@ import java.net.Socket;
 
 /**
  * This class defines a thread that is managing a request.
+ *
  * @author siggouroglou@gmail.com
  */
 public class ClientManager extends Thread {
@@ -74,7 +76,8 @@ public class ClientManager extends Thread {
 
     /**
      * This method convert the String request to a RequestModel object.
-     * @return 
+     *
+     * @return
      */
     private RequestModel readRequest() {
         RequestModel request = null;
@@ -98,9 +101,11 @@ public class ClientManager extends Thread {
     }
 
     /**
-     * Identifies the type of the request and calls the appropriate method to continue.
+     * Identifies the type of the request and calls the appropriate method to
+     * continue.
+     *
      * @param request The request that will be identified.
-     * @return 
+     * @return
      */
     private ResponseModel manageRequest(RequestModel request) {
 
@@ -118,7 +123,7 @@ public class ClientManager extends Thread {
             Gson gson = new GsonBuilder()
                     .setDateFormat("dd.MM.yyyy")
                     .create();
-            modelInstance = gson.fromJson(request.getModel(), Class.forName("gr.unipi.mainpackage.server.model." + request.getEntityName()));
+            modelInstance = gson.fromJson(request.getModel(), Class.forName("gr.unipi.mainpackage.server.model.data." + request.getEntityName()));
         } catch (Exception ex) {
             logger.fatal("Request entity was not valid.", ex);
             sendError("Request entity was not valid.");
@@ -149,31 +154,38 @@ public class ClientManager extends Thread {
      * Executes the request that is managing the data.
      * <br/>
      * Only available for search/create/read/update/delete request methods.
+     *
      * @param request
      * @param serviceInstance
      * @param modelInstance
-     * @return 
+     * @return
      */
     private ResponseModel manageRequest_data(RequestModel request, Object serviceInstance, Object modelInstance) {
-        // Check if user is logged in.
-        logger.debug("Check if user is logged in.");
+        // Get the user that requested this.
         SessionCache sessionCache = SessionCache.getInstance();
         AuthorizationModel authorizationModel = sessionCache.findBySessionId(request.getSessionId());
-        if (authorizationModel == null) {
-            logger.fatal("User is not logged in.");
-            sendError("User is not logged in.");
-            closeRequest();
-            isUp = false;
-            return null;
-        }
+        AuthorizedUser authorizedUser = authorizationModel.getAuthorizedUser();
 
-        // Check if this users session is expired.
-        if (sessionCache.isExpired(request.getSessionId())) {
-            logger.fatal("Your session is expired.");
-            sendError("Your session is expired.");
-            closeRequest();
-            isUp = false;
-            return null;
+        // Allow with login or not.
+        if (PropertiesUtilities.getInstance().getBoolean("server.allowWithLogin", "false")) {
+            // Check if user is logged in.
+            logger.debug("Check if user is logged in.");
+            if (authorizedUser == null) {
+                logger.fatal("User is not logged in.");
+                sendError("User is not logged in.");
+                closeRequest();
+                isUp = false;
+                return null;
+            }
+
+            // Check if this users session is expired.
+            if (sessionCache.isExpired(request.getSessionId())) {
+                logger.fatal("Your session is expired.");
+                sendError("Your session is expired.");
+                closeRequest();
+                isUp = false;
+                return null;
+            }
         }
 
         // Get the method to run using Java Reflection.
@@ -194,8 +206,8 @@ public class ClientManager extends Thread {
         ResponseModel response = new ResponseModel();
         try {
             // Get the returned object.
-            Object invoke = method.invoke(modelInstance, authorizationModel);
-            
+            Object invoke = method.invoke(serviceInstance, modelInstance, authorizedUser);
+
             // Manage the response.
             Gson gson = new GsonBuilder()
                     .setDateFormat("dd.MM.yyyy")
@@ -213,11 +225,13 @@ public class ClientManager extends Thread {
     }
 
     /**
-     * Executes the request that is managing the login and logout of the application.
+     * Executes the request that is managing the login and logout of the
+     * application.
+     *
      * @param request
      * @param serviceInstance
      * @param modelInstance
-     * @return 
+     * @return
      */
     private ResponseModel manageRequest_auth(RequestModel request, Object serviceInstance, Object modelInstance) {
         // Get the method to run using Java Reflection.
@@ -239,7 +253,7 @@ public class ClientManager extends Thread {
         try {
             // Get the returned object.
             Object invoke = method.invoke(modelInstance);
-            
+
             // Manage the response.
             Gson gson = new GsonBuilder()
                     .setDateFormat("dd.MM.yyyy")
@@ -258,6 +272,7 @@ public class ClientManager extends Thread {
 
     /**
      * Sending the response to the client.
+     *
      * @param response The response that will be send.
      */
     private void sendResponse(ResponseModel response) {
@@ -277,6 +292,7 @@ public class ClientManager extends Thread {
 
     /**
      * Sending an error message as response to the client.
+     *
      * @param errorMessage The error message that will be send.
      */
     private void sendError(String errorMessage) {

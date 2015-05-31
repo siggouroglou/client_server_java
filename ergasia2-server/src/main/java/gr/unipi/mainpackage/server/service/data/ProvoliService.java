@@ -4,6 +4,8 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
+import gr.unipi.mainpackage.server.model.data.Provoli;
+import gr.unipi.mainpackage.server.service.fileManager.ProvoliDbFileManager;
 import java.util.List;
 
 /**
@@ -14,8 +16,10 @@ import java.util.List;
  * @author siggouroglou@gmail.com
  */
 public class ProvoliService {
+    ProvoliDbFileManager dbManager;
 
     public ProvoliService() {
+        dbManager = new ProvoliDbFileManager();
     }
     
     /**
@@ -24,7 +28,7 @@ public class ProvoliService {
      * @param user
      * @return the new provoli object.
      */
-    public ProvoliService createProvoli(ProvoliService provoli, AuthorizedUser user) {
+    public Provoli createProvoli(Provoli provoli, AuthorizedUser user) {
         // Check the arguments.
         if (provoli == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -33,10 +37,11 @@ public class ProvoliService {
         if (!AuthorityUtils.hasAuthority(Authority.Provoli_C, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-
+        
         // Implement the code.
-        System.out.println("Provoli created");
-        return null;
+        Provoli provoliNew = dbManager.create(provoli);
+        
+        return provoliNew;
     }
     
     /**
@@ -46,7 +51,7 @@ public class ProvoliService {
      * @param user
      * @return The new updated provoli object.
      */
-    public ProvoliService updateProvoli(int id, ProvoliService provoli, AuthorizedUser user) {
+    public Provoli updateProvoli(int id, Provoli provoli, AuthorizedUser user) {
         // Check the arguments.
         if (provoli == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -67,7 +72,7 @@ public class ProvoliService {
      * @param user
      * @return the deleted provoli object.
      */
-    public ProvoliService deleteProvoli(ProvoliService provoli, AuthorizedUser user) {
+    public Provoli deleteProvoli(Provoli provoli, AuthorizedUser user) {
         // Check the arguments.
         if (provoli == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");
@@ -88,7 +93,7 @@ public class ProvoliService {
      * @param user
      * @return an array of provoli objects.
      */
-    public List<ProvoliService> readProvoli(ProvoliService provoli, AuthorizedUser user) {
+    public List<Provoli> readProvoli(Provoli provoli, AuthorizedUser user) {
         // Check the arguments.
         if (provoli == null || user == null) {
             throw new IllegalArgumentException("Null arguments.");

@@ -3,3 +3,98 @@
 2015-05-31 14:07:54 DEBUG StartUp:30 - Sending no 3.
 2015-05-31 14:07:54 DEBUG StartUp:32 - Sending no 4.
 2015-05-31 14:07:54 DEBUG StartUp:39 - Completed.
+2015-05-31 17:50:20 DEBUG ClientManager:37 - Opening the connection.
+2015-05-31 17:50:20 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:50:20 DEBUG ClientManager:40 - Sending the request.
+2015-05-31 17:50:20 DEBUG ClientManager:48 - Receiving the response.
+2015-05-31 17:54:02 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 17:54:02 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:54:02 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 17:54:02 DEBUG ClientManager:46 - Receiving the response.
+2015-05-31 17:54:29 DEBUG ClientManager:58 - Completed.
+2015-05-31 17:55:37 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 17:55:37 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:55:37 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 17:55:37 DEBUG ClientManager:46 - Receiving the response.
+2015-05-31 17:55:47 DEBUG ClientManager:58 - Completed.
+2015-05-31 17:57:36 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 17:57:36 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:57:36 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 17:57:36 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 17:57:45 DEBUG ClientManager:52 - Completed.
+2015-05-31 17:58:40 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 17:58:40 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 17:58:40 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 17:58:40 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 17:58:40 DEBUG ClientManager:52 - Completed.
+2015-05-31 18:03:35 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 18:03:35 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:03:35 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 18:03:35 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 18:03:35 DEBUG ClientManager:52 - Completed.
+2015-05-31 18:03:57 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 18:03:57 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:03:57 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 18:03:57 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 18:03:57 DEBUG ClientManager:52 - Completed.
+2015-05-31 18:05:12 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 18:05:12 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:05:12 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 18:05:12 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 18:05:13 DEBUG ClientManager:52 - Completed.
+2015-05-31 18:06:36 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 18:06:36 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:06:36 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 18:06:36 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 18:06:36 DEBUG ClientManager:52 - Completed.
+2015-05-31 18:07:47 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 18:07:47 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:07:47 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 18:07:47 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 18:07:47 DEBUG ClientManager:52 - Completed.
+2015-05-31 18:15:21 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 18:15:21 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 18:15:21 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 18:15:21 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 18:15:21 DEBUG ClientManager:52 - Completed.
+2015-05-31 20:38:43 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 20:38:44 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 20:38:44 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 20:39:25 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 20:39:26 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 20:39:26 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 20:39:51 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 20:39:51 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 20:39:52 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 20:39:54 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 20:40:05 DEBUG ClientManager:52 - Completed.
+2015-05-31 21:03:39 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:03:39 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:03:39 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 21:03:39 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 21:03:39 DEBUG ClientManager:52 - Completed.
+2015-05-31 21:04:07 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:04:07 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:04:07 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 21:04:07 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 21:04:07 DEBUG ClientManager:52 - Completed.
+2015-05-31 21:05:37 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:05:37 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:05:37 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 21:05:37 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 21:05:37 DEBUG ClientManager:52 - Completed.
+2015-05-31 21:06:37 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:06:37 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:06:37 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 21:06:37 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 21:06:37 DEBUG ClientManager:52 - Completed.
+2015-05-31 21:06:52 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:06:52 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:06:52 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 21:06:52 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 21:06:52 DEBUG ClientManager:52 - Completed.
+2015-05-31 21:09:37 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:09:37 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:09:37 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 21:09:37 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 21:09:37 DEBUG ClientManager:52 - Completed.

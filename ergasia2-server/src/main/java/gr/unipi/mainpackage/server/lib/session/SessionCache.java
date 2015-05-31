@@ -1,6 +1,8 @@
 package gr.unipi.mainpackage.server.lib.session;
 
+import gr.unipi.mainpackage.server.lib.Encryption;
 import gr.unipi.mainpackage.server.lib.PropertiesUtilities;
+import gr.unipi.mainpackage.server.model.data.Admin;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +19,15 @@ public final class SessionCache {
 
     private SessionCache() {
         this.sessionMap = new HashMap<>();
+        
+        // Code to delete.
+        Admin admin = new Admin();
+        admin.setPassword(Encryption.getHashMD5("qweqwe"));
+        
+        AuthorizationModel authorizationModel = new AuthorizationModel();
+        authorizationModel.setLastAccess(new Date());
+        authorizationModel.setAuthorizedUser(admin);
+        sessionMap.put(1, authorizationModel);
     }
 
     public static SessionCache getInstance() {
