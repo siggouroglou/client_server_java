@@ -1,4 +1,4 @@
-package gr.papei.mainpackage.server.data.model;
+package gr.papei.mainpackage.server.model;
 
 /**
  *
@@ -7,12 +7,12 @@ package gr.papei.mainpackage.server.data.model;
 public class CinemaRoom {
 
     private int id;
-    private boolean is3D;
+    private boolean support3D;
     private int totalSeats;
 
     public CinemaRoom() {
         this.id = -1;
-        this.is3D = false;
+        this.support3D = false;
         this.totalSeats = 0;
     }
 
@@ -24,12 +24,12 @@ public class CinemaRoom {
         this.id = id;
     }
 
-    public boolean isIs3D() {
-        return is3D;
+    public boolean isSupport3D() {
+        return support3D;
     }
 
-    public void setIs3D(boolean is3D) {
-        this.is3D = is3D;
+    public void setSupport3D(boolean support3D) {
+        this.support3D = support3D;
     }
 
     public int getTotalSeats() {

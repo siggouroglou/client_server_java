@@ -1,13 +1,12 @@
 package gr.papei.mainpackage.server;
 
 import com.google.gson.Gson;
-import gr.papei.mainpackage.server.data.model.Admin;
-import gr.papei.mainpackage.server.data.model.ContentAdmin;
-import gr.papei.mainpackage.server.data.model.Film;
-import gr.papei.mainpackage.server.data.model.CinemaRoom;
-import gr.papei.mainpackage.server.data.model.Customer;
-import gr.papei.mainpackage.server.data.model.Provoli;
-import gr.papei.mainpackage.server.data.model.Reservation;
+import gr.papei.mainpackage.server.model.Admin;
+import gr.papei.mainpackage.server.model.ContentAdmin;
+import gr.papei.mainpackage.server.model.Film;
+import gr.papei.mainpackage.server.model.CinemaRoom;
+import gr.papei.mainpackage.server.model.Customer;
+import gr.papei.mainpackage.server.model.Provoli;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -51,7 +50,7 @@ public class MainClass {
         // ContentAdmin creates a CinemaRoom.
         CinemaRoom cinemaRoom = new CinemaRoom();
         cinemaRoom.setId(1);
-        cinemaRoom.setIs3D(true);
+        cinemaRoom.setSupport3D(true);
         cinemaRoom.setTotalSeats(15);
 //        contentAdmin.createCinemaRoom(cinemaRoom);
 
@@ -63,7 +62,7 @@ public class MainClass {
         provoli.setStartDate(new Date());
         provoli.setEndDate(new Date());
         provoli.setNumberOfReservations(0);
-        provoli.setIsAvailable(true);
+//        provoli.setIsAvailable(true);
 //        contentAdmin.createProvoli(provoli);
 
         // Add a reservation for the created customer.

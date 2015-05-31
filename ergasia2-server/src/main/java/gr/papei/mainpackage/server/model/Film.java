@@ -1,4 +1,4 @@
-package gr.papei.mainpackage.server.data.model;
+package gr.papei.mainpackage.server.model;
 
 /**
  *

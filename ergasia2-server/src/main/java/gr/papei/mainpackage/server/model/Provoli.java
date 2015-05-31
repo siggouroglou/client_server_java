@@ -1,4 +1,4 @@
-package gr.papei.mainpackage.server.data.model;
+package gr.papei.mainpackage.server.model;
 
 import java.util.Date;
 
@@ -13,7 +13,7 @@ public class Provoli {
     private Date startDate;
     private Date endDate;
     private int numberOfReservations;
-    private boolean isAvailable;
+    private boolean available;
 
     public Provoli() {
         this.id = -1;
@@ -22,7 +22,7 @@ public class Provoli {
         this.startDate = null;
         this.endDate = null;
         this.numberOfReservations = 0;
-        this.isAvailable = false;
+        this.available = false;
     }
 
     public int getId() {
@@ -73,11 +73,11 @@ public class Provoli {
         this.numberOfReservations = numberOfReservations;
     }
 
-    public boolean isIsAvailable() {
-        return isAvailable;
+    public boolean isAvailable() {
+        return available;
     }
 
-    public void setIsAvailable(boolean isAvailable) {
-        this.isAvailable = isAvailable;
+    public void setAvailable(boolean isAvailable) {
+        this.available = isAvailable;
     }
 }
