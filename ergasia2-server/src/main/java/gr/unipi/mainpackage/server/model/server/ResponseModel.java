@@ -1,7 +1,7 @@
 package gr.unipi.mainpackage.server.model.server;
 
 /**
- *
+ * This is the model that clients are receiving as a response from the server.
  * @author siggouroglou@gmail.com
  */
 public class ResponseModel {

@@ -1,7 +1,7 @@
 package gr.unipi.mainpackage.server.lib.authority;
 
 /**
- *
+ * Utility class that include only one method.
  * @author siggouroglou@gmail.com
  */
 public class AuthorityUtils {

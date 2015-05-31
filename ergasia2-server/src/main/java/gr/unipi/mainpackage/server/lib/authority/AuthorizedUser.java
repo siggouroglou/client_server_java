@@ -4,6 +4,8 @@ import java.util.List;
 
 /**
  * This interface defines types that are users with authorities.
+ * <br/>
+ * It is not a strategy pattern.
  * @author siggouroglou
  */
 public interface AuthorizedUser {

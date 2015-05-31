@@ -7,7 +7,11 @@ import java.net.Socket;
 import org.apache.log4j.Logger;
 
 /**
- *
+ * The server class of the application.
+ * <br/>
+ * This class could be a singleton.
+ * <br/>
+ * Manages the port opened and creates a ClientManager thread per connection.
  * @author siggouroglou@gmail.com
  */
 public class MainServer {

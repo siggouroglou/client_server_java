@@ -1,4 +1,4 @@
-package gr.unipi.mainpackage.server.model;
+package gr.unipi.mainpackage.server.model.data;
 
 import java.util.Date;
 

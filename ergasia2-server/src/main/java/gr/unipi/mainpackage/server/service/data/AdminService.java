@@ -6,10 +6,12 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
-import gr.unipi.mainpackage.server.model.Admin;
+import gr.unipi.mainpackage.server.model.data.Admin;
 
 /**
- *
+ * Database methods for model Admin.
+ * <br/>
+ * Every method name follows a standard convention that is used for Java Reflections calls from request manager.
  * @author siggouroglou@gmail.com
  */
 public class AdminService implements SignInAbleService {

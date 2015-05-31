@@ -8,6 +8,9 @@ import java.util.List;
 
 /**
  *
+ * Database methods for model Film.
+ * <br/>
+ * Every method name follows a standard convention that is used for Java Reflections calls from request manager.
  * @author siggouroglou@gmail.com
  */
 public class FilmService {

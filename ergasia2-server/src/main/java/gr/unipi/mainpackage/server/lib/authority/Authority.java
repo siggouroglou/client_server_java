@@ -1,7 +1,7 @@
 package gr.unipi.mainpackage.server.lib.authority;
 
 /**
- *
+ * Enumeration that include all the available authorities of the application.
  * @author siggouroglou
  */
 public enum Authority {

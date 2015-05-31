@@ -1,7 +1,7 @@
 package gr.unipi.mainpackage.server.model.server;
 
 /**
- *
+ * This is a response model that clients are receiving on error.
  * @author siggouroglou@gmail.com
  */
 public class ResponseErrorModel {

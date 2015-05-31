@@ -9,7 +9,7 @@ import gr.unipi.mainpackage.server.service.server.MainServer;
 public class StartUp {
 
     public static void main(String[] args) {
-        // Start the server.
+        // Starts the server.
         MainServer mainServer = new MainServer();
         mainServer.listenSocket();
     }

@@ -1,7 +1,7 @@
 package gr.unipi.mainpackage.server.model.server;
 
 /**
- *
+ * Request available types.
  * @author siggouroglou
  */
 public enum RequestMethod {

@@ -7,7 +7,9 @@ import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import java.util.List;
 
 /**
- *
+ * Database methods for model CinemaRoom.
+ * <br/>
+ * Every method name follows a standard convention that is used for Java Reflections calls from request manager.
  * @author siggouroglou@gmail.com
  */
 public class CinemaRoomService {

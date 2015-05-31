@@ -3,8 +3,9 @@ package gr.unipi.mainpackage.server.service.fileManager;
 import java.util.List;
 
 /**
- *
+ * This interface defines a type for classes that are serving a database front end.
  * @author siggouroglou
+ * @param <T> The types of data in the database.
  */
 public interface DbFileManager<T> {
 

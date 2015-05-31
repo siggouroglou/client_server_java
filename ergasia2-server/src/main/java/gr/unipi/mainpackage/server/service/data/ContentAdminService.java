@@ -6,11 +6,14 @@ import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
-import gr.unipi.mainpackage.server.model.ContentAdmin;
+import gr.unipi.mainpackage.server.model.data.ContentAdmin;
 import java.util.List;
 
 /**
  *
+ * Database methods for model ContentAdmin.
+ * <br/>
+ * Every method name follows a standard convention that is used for Java Reflections calls from request manager.
  * @author siggouroglou@gmail.com
  */
 public class ContentAdminService implements SignInAbleService {

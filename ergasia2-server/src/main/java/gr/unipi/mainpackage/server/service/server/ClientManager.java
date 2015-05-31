@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 import java.net.Socket;
 
 /**
- *
+ * This class defines a thread that is managing a request.
  * @author siggouroglou@gmail.com
  */
 public class ClientManager extends Thread {
@@ -33,6 +33,11 @@ public class ClientManager extends Thread {
         this.socket = socket;
     }
 
+    /**
+     * Main method of this thread.
+     * <br/>
+     * Executes a request.
+     */
     @Override
     public void run() {
         // Check the socket state.
@@ -67,6 +72,10 @@ public class ClientManager extends Thread {
         }
     }
 
+    /**
+     * This method convert the String request to a RequestModel object.
+     * @return 
+     */
     private RequestModel readRequest() {
         RequestModel request = null;
 
@@ -88,6 +97,11 @@ public class ClientManager extends Thread {
         return request;
     }
 
+    /**
+     * Identifies the type of the request and calls the appropriate method to continue.
+     * @param request The request that will be identified.
+     * @return 
+     */
     private ResponseModel manageRequest(RequestModel request) {
 
         // Get the model and service instances using Java Reflection.
@@ -131,6 +145,15 @@ public class ClientManager extends Thread {
         return null;
     }
 
+    /**
+     * Executes the request that is managing the data.
+     * <br/>
+     * Only available for search/create/read/update/delete request methods.
+     * @param request
+     * @param serviceInstance
+     * @param modelInstance
+     * @return 
+     */
     private ResponseModel manageRequest_data(RequestModel request, Object serviceInstance, Object modelInstance) {
         // Check if user is logged in.
         logger.debug("Check if user is logged in.");
@@ -189,6 +212,13 @@ public class ClientManager extends Thread {
         return response;
     }
 
+    /**
+     * Executes the request that is managing the login and logout of the application.
+     * @param request
+     * @param serviceInstance
+     * @param modelInstance
+     * @return 
+     */
     private ResponseModel manageRequest_auth(RequestModel request, Object serviceInstance, Object modelInstance) {
         // Get the method to run using Java Reflection.
         logger.debug("Get the login/out method.");
@@ -226,6 +256,10 @@ public class ClientManager extends Thread {
         return response;
     }
 
+    /**
+     * Sending the response to the client.
+     * @param response The response that will be send.
+     */
     private void sendResponse(ResponseModel response) {
         // Get the model as json.
         Gson gson = new Gson();
@@ -241,6 +275,10 @@ public class ClientManager extends Thread {
         }
     }
 
+    /**
+     * Sending an error message as response to the client.
+     * @param errorMessage The error message that will be send.
+     */
     private void sendError(String errorMessage) {
         // Create the error message model.
         ResponseErrorModel response = new ResponseErrorModel();
@@ -260,6 +298,9 @@ public class ClientManager extends Thread {
         }
     }
 
+    /**
+     * Closes the current request.
+     */
     private void closeRequest() {
         logger.debug("Close the connection.");
         try {

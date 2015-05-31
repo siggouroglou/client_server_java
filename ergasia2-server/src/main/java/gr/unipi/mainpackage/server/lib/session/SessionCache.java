@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Singleton class that manages the sessions of the users.
+ * Singleton class that manages the sessions of the users of the server.
  *
  * @author siggouroglou@gmail.com
  */

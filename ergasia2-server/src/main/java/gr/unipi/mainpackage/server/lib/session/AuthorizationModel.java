@@ -4,7 +4,9 @@ import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import java.util.Date;
 
 /**
- *
+ * This is a Java bean that wraps a user with a lastAccess date.
+ * <br/>
+ * Used only for the session map.
  * @author siggouroglou@gmail.com
  */
 public class AuthorizationModel {
