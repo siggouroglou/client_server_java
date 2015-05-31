@@ -1,7 +1,7 @@
 package gr.unipi.mainpackage.server.service.data;
 
-import gr.unipi.mainpackage.server.lib.SignInAbleService;
-import gr.unipi.mainpackage.server.lib.SignInAbleUser;
+import gr.unipi.mainpackage.server.lib.signin.SignInAbleService;
+import gr.unipi.mainpackage.server.lib.signin.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.Authority;
 import gr.unipi.mainpackage.server.lib.authority.AuthorityUtils;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;

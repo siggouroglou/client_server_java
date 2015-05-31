@@ -1,6 +1,6 @@
 package gr.unipi.mainpackage.server.model;
 
-import gr.unipi.mainpackage.server.lib.SignInAbleUser;
+import gr.unipi.mainpackage.server.lib.signin.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.Authority;
 import static gr.unipi.mainpackage.server.lib.authority.Authority.*;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;

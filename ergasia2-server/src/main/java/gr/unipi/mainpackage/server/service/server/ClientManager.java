@@ -2,7 +2,7 @@ package gr.unipi.mainpackage.server.service.server;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import gr.unipi.mainpackage.server.lib.SignInAbleUser;
+import gr.unipi.mainpackage.server.lib.signin.SignInAbleUser;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import gr.unipi.mainpackage.server.lib.session.AuthorizationModel;
 import gr.unipi.mainpackage.server.lib.session.SessionCache;
