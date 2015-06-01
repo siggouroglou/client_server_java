@@ -115,6 +115,7 @@ public class ContentAdminService implements SignInAbleService {
 
     /**
      *
+     * @param contentAdmin
      * @param user
      * @return an array with all the existing contentAdmins.
      */
@@ -134,13 +135,17 @@ public class ContentAdminService implements SignInAbleService {
     }
     
     @Override
-    public boolean login(SignInAbleUser user){
-        return true;
+    public AuthorizedUser login(SignInAbleUser user){
+        // Get the user with this username, password.
+        List<ContentAdmin> contentAdminList = dbManager.search((ContentAdmin) user);
+        
+        // Return true if it is found.
+        return contentAdminList.size() == 1 ? contentAdminList.get(0) : null;
     }
     
     @Override
-    public boolean logout(SignInAbleUser user){
-        return true;
+    public AuthorizedUser logout(SignInAbleUser user){
+        return null;
     }
 
 }

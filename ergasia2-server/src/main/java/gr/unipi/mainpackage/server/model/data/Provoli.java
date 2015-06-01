@@ -80,4 +80,26 @@ public class Provoli {
     public void setAvailable(boolean isAvailable) {
         this.available = isAvailable;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + this.id;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Provoli other = (Provoli) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        return true;
+    }
 }

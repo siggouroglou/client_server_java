@@ -4,17 +4,17 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import gr.unipi.mainpackage.client.model.client.RequestMethod;
 import gr.unipi.mainpackage.client.model.client.RequestModel;
-import gr.unipi.mainpackage.client.model.data.Admin;
+import gr.unipi.mainpackage.client.model.data.ContentAdmin;
 
 /**
  *
  * @author siggouroglou@gmail.com
  */
-public class AdminCreateScenario implements Scenario {
+public class ContentAdminCreateScenario implements Scenario {
 
     private RequestModel requestModel;
 
-    public AdminCreateScenario(Admin admin) {
+    public ContentAdminCreateScenario(ContentAdmin contentAdmin) {
         // Gson for converting this admin to json.
         Gson gson = new GsonBuilder()
                 .setDateFormat("dd.MM.yyyy")
@@ -22,9 +22,9 @@ public class AdminCreateScenario implements Scenario {
         
         // Initialize the requestModel
         requestModel = new RequestModel();
-        requestModel.setEntityName("Admin");
+        requestModel.setEntityName("ContentAdmin");
         requestModel.setMethod(RequestMethod.CREATE);
-        requestModel.setModel(gson.toJson(admin, Admin.class));
+        requestModel.setModel(gson.toJson(contentAdmin, ContentAdmin.class));
     }
 
     @Override

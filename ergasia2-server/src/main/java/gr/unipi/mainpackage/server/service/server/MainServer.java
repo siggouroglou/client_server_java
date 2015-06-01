@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
  * <br/>
  * This class could be a singleton.
  * <br/>
- * Manages the port opened and creates a ClientManager thread per connection.
+ Manages the port opened and creates a ServerManager thread per connection.
  * @author siggouroglou@gmail.com
  */
 public class MainServer {
@@ -41,7 +41,7 @@ public class MainServer {
                 Socket client = server.accept();
 
                 logger.debug("Manage the connection to another thread.");
-                new ClientManager(client).start();
+                new ServerManager(client).start();
             } catch (Exception ex) {
                 logger.fatal("Accept to client failed.", ex);
                 break;

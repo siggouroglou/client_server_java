@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,14 +28,32 @@ public class ContentAdminDbFileManager implements DbFileManager<ContentAdmin> {
     private static final String DB_PATH = "database/ContentAdmin.db";
 
     @Override
+    public List<ContentAdmin> search(ContentAdmin contentAdmin) {
+        // Get all the contentAdmins from file.
+        List<ContentAdmin> dbList = readOrWriteToFile(null);
+        List<ContentAdmin> returnList = new LinkedList<>();
+
+        // Search for object that are simmilar with the argument.
+        for (ContentAdmin curent : dbList) {
+            if ((contentAdmin.getName().isEmpty() || (!contentAdmin.getName().isEmpty() && contentAdmin.getName().equals(curent.getName())))
+                    && (contentAdmin.getUsername().isEmpty() || (!contentAdmin.getUsername().isEmpty() && contentAdmin.getUsername().equals(curent.getUsername())))
+                    && (contentAdmin.getPassword().isEmpty() || (!contentAdmin.getPassword().isEmpty() && contentAdmin.getPassword().equals(curent.getPassword())))) {
+                returnList.add(curent);
+            }
+        }
+
+        return returnList;
+    }
+
+    @Override
     public ContentAdmin create(ContentAdmin contentAdmin) {
-        // Get all the admins from file.
+        // Get all the contentAdmins from file.
         List<ContentAdmin> dbList = readOrWriteToFile(null);
 
         // Add the new one.
         dbList.add(contentAdmin);
 
-        // Get the distinct admin List.
+        // Get the distinct contentAdmin List.
         List<ContentAdmin> distinctList = dbList.stream().distinct().collect(Collectors.toList());
 
         // Save them back to file.
@@ -76,7 +95,7 @@ public class ContentAdminDbFileManager implements DbFileManager<ContentAdmin> {
                 if (array == null) {
                     return new ArrayList<>();
                 } else {
-                    return Arrays.asList(array);
+                    return new ArrayList<>(Arrays.asList(array));
                 }
             } catch (Exception ex) {
                 logger.error("DB ContentAdmin file didn't read.", ex);

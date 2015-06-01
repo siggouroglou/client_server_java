@@ -9,6 +9,8 @@ import java.util.List;
  */
 public interface DbFileManager<T> {
 
+    public List<T> search(T t);
+
     public T create(T t);
 
     public List<T> readAll(T t);

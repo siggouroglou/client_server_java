@@ -28,4 +28,30 @@ public class Reservation {
     public void setProvoliId(int provoliId) {
         this.provoliId = provoliId;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 53 * hash + this.customerId;
+        hash = 53 * hash + this.provoliId;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Reservation other = (Reservation) obj;
+        if (this.customerId != other.customerId) {
+            return false;
+        }
+        if (this.provoliId != other.provoliId) {
+            return false;
+        }
+        return true;
+    }
 }

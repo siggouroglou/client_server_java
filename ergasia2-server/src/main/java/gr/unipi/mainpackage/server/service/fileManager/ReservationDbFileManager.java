@@ -26,6 +26,11 @@ public class ReservationDbFileManager implements DbFileManager<Reservation> {
     private static final String DB_PATH = "database/Reservation.db";
 
     @Override
+    public List<Reservation> search(Reservation t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public Reservation create(Reservation reservation) {
         // Get all the admins from file.
         List<Reservation> dbList = readOrWriteToFile(null);
@@ -75,7 +80,7 @@ public class ReservationDbFileManager implements DbFileManager<Reservation> {
                 if (array == null) {
                     return new ArrayList<>();
                 } else {
-                    return Arrays.asList(array);
+                    return new ArrayList<>(Arrays.asList(array));
                 }
             } catch (Exception ex) {
                 logger.error("DB Reservation file didn't read.", ex);

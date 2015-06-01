@@ -98,3 +98,258 @@
 2015-05-31 21:09:37 DEBUG ClientManager:37 - Sending the request.
 2015-05-31 21:09:37 DEBUG ClientManager:45 - Receiving the response.
 2015-05-31 21:09:37 DEBUG ClientManager:52 - Completed.
+2015-05-31 21:53:15 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:53:15 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:53:15 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 21:54:04 DEBUG ClientManager:45 - Receiving the response.
+2015-05-31 21:54:06 DEBUG ClientManager:52 - Completed.
+2015-05-31 21:54:26 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:54:26 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:54:26 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 21:59:45 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 21:59:45 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 21:59:45 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 22:00:01 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 22:00:01 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 22:00:01 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 22:00:01 DEBUG ClientManager:46 - Receiving the response.
+2015-05-31 22:00:08 DEBUG ClientManager:53 - Completed.
+2015-05-31 22:00:25 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 22:00:25 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 22:00:25 ERROR ClientManager:51 - Server connection failed.
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:35)
+2015-05-31 22:00:25 DEBUG ClientManager:53 - Completed.
+2015-05-31 22:00:33 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 22:00:35 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 22:00:35 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 22:00:40 DEBUG ClientManager:46 - Receiving the response.
+2015-05-31 22:01:33 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 22:01:34 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 22:01:34 DEBUG ClientManager:37 - Sending the request.
+2015-05-31 22:01:36 DEBUG ClientManager:46 - Receiving the response.
+2015-05-31 22:03:35 DEBUG ClientManager:34 - Opening the connection.
+2015-05-31 22:03:36 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-05-31 22:03:37 DEBUG ClientManager:37 - Sending the request.
+2015-06-01 15:34:07 DEBUG ClientManager:34 - Opening the connection.
+2015-06-01 15:34:08 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 15:34:16 DEBUG ClientManager:37 - Sending the request.
+2015-06-01 15:34:48 DEBUG ClientManager:46 - Receiving the response.
+2015-06-01 15:35:28 DEBUG ClientManager:53 - Completed.
+2015-06-01 20:29:10 DEBUG ClientManager:37 - Opening the connection.
+2015-06-01 20:29:10 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:29:21 DEBUG ClientManager:44 - Sending the request.
+2015-06-01 20:29:29 DEBUG ClientManager:53 - Receiving the response.
+2015-06-01 20:32:51 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:32:51 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:32:52 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:32:54 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:33:21 INFO  ClientManager:63 - RESPONSE: Session id received - -1
+2015-06-01 20:33:25 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:34:03 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:34:03 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:34:03 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:34:04 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:34:30 INFO  ClientManager:63 - RESPONSE: Session id received - 2
+2015-06-01 20:34:34 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:38:15 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:38:15 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:38:24 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:38:27 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:38:50 INFO  ClientManager:63 - RESPONSE: Session id received - 2
+2015-06-01 20:38:53 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:38:54 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:38:56 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:38:59 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:41:15 ERROR ClientManager:69 - Server connection failed.
+java.io.EOFException
+	at java.io.DataInputStream.readFully(DataInputStream.java:197)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:609)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:56)
+2015-06-01 20:41:16 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:41:25 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:41:25 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:41:25 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:41:25 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:41:37 INFO  ClientManager:63 - RESPONSE: Session id received - 3
+2015-06-01 20:41:37 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:41:38 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:41:39 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:41:41 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:42:18 INFO  ClientManager:66 - RESPONSE: {"name":"","username":"siggouroglou","password":"EFE6398127928F1B2E9EF3207FB82663"}
+2015-06-01 20:42:21 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:43:57 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:43:57 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:43:57 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:43:57 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:44:01 INFO  ClientManager:63 - RESPONSE: Session id received - 4
+2015-06-01 20:44:01 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:44:01 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:44:01 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:44:01 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:44:04 ERROR ClientManager:69 - Server connection failed.
+java.io.EOFException
+	at java.io.DataInputStream.readFully(DataInputStream.java:197)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:609)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:56)
+2015-06-01 20:44:04 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:45:07 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:45:07 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:45:07 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:45:07 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:45:11 INFO  ClientManager:63 - RESPONSE: Session id received - 5
+2015-06-01 20:45:11 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:45:11 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:45:11 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:45:11 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:45:38 ERROR ClientManager:69 - Server connection failed.
+java.io.EOFException
+	at java.io.DataInputStream.readFully(DataInputStream.java:197)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:609)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:56)
+2015-06-01 20:45:38 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:45:44 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:45:44 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:45:44 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:45:44 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:45:47 INFO  ClientManager:63 - RESPONSE: Session id received - 6
+2015-06-01 20:45:47 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:45:47 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:45:47 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:45:47 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:47:45 ERROR ClientManager:69 - Server connection failed.
+java.io.EOFException
+	at java.io.DataInputStream.readFully(DataInputStream.java:197)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:609)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:56)
+2015-06-01 20:47:45 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:48:02 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:48:02 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:48:02 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:48:02 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:48:05 INFO  ClientManager:63 - RESPONSE: Session id received - 7
+2015-06-01 20:48:05 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:48:05 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:48:05 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:48:05 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:48:06 ERROR ClientManager:69 - Server connection failed.
+java.io.EOFException
+	at java.io.DataInputStream.readFully(DataInputStream.java:197)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:609)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:56)
+2015-06-01 20:48:06 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:48:12 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:48:12 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:48:12 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:48:12 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:48:13 INFO  ClientManager:63 - RESPONSE: Session id received - 8
+2015-06-01 20:48:13 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:48:13 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:48:13 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:48:13 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:49:20 ERROR ClientManager:69 - Server connection failed.
+java.io.EOFException
+	at java.io.DataInputStream.readFully(DataInputStream.java:197)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:609)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:56)
+2015-06-01 20:49:20 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:50:19 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:50:19 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:50:19 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:50:19 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:50:20 INFO  ClientManager:63 - RESPONSE: Session id received - 2
+2015-06-01 20:50:20 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:50:20 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:50:20 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:50:20 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:52:09 ERROR ClientManager:69 - Server connection failed.
+java.io.EOFException
+	at java.io.DataInputStream.readFully(DataInputStream.java:197)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:609)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:56)
+2015-06-01 20:52:09 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:52:39 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:52:39 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 20:52:39 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:52:39 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:52:40 INFO  ClientManager:63 - RESPONSE: Session id received - 2
+2015-06-01 20:52:40 DEBUG ClientManager:71 - Completed.
+2015-06-01 20:52:40 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 20:52:40 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 20:52:40 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 20:52:51 INFO  ClientManager:66 - RESPONSE: {"name":"Content Adminopoulos","username":"contentable","password":"0E4D7DDF18FEE3FABC96B233950F87DF"}
+2015-06-01 20:52:51 DEBUG ClientManager:71 - Completed.
+2015-06-01 21:02:54 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:02:54 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 21:02:54 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:02:54 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:03:06 INFO  ClientManager:60 - RESPONSE: Session id received - 2
+2015-06-01 21:03:06 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:03:08 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:03:08 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:03:08 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:03:26 INFO  ClientManager:63 - RESPONSE: {"name":"Content Adminopoulos","username":"contentable","password":"0E4D7DDF18FEE3FABC96B233950F87DF"}
+2015-06-01 21:03:26 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:03:28 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:03:28 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:03:28 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:03:38 INFO  ClientManager:60 - RESPONSE: Session id received - -1
+2015-06-01 21:03:38 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:04:55 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:04:57 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:04:57 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:05:22 ERROR ClientManager:66 - Server connection failed.
+java.io.EOFException
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589)
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564)
+	at gr.unipi.mainpackage.client.service.ClientManager.run(ClientManager.java:56)
+2015-06-01 21:05:22 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:25:06 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:25:06 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 21:25:06 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:25:06 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:25:09 INFO  ClientManager:60 - RESPONSE: Session id received - 2
+2015-06-01 21:25:09 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:25:11 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:25:11 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:25:11 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:26:26 INFO  ClientManager:63 - RESPONSE: {"name":"Content Adminopoulos","username":"contentable","password":"0E4D7DDF18FEE3FABC96B233950F87DF"}
+2015-06-01 21:26:26 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:26:51 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:26:51 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-01 21:26:51 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:26:51 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:26:53 INFO  ClientManager:60 - RESPONSE: Session id received - 2
+2015-06-01 21:26:53 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:26:54 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:26:54 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:26:54 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:27:04 INFO  ClientManager:63 - RESPONSE: {"name":"Content Adminopoulos","username":"contentable","password":"0E4D7DDF18FEE3FABC96B233950F87DF"}
+2015-06-01 21:27:04 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:27:09 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:27:09 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:27:09 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:27:26 INFO  ClientManager:60 - RESPONSE: Session id received - 3
+2015-06-01 21:27:26 DEBUG ClientManager:68 - Completed.
+2015-06-01 21:27:33 DEBUG ClientManager:38 - Opening the connection.
+2015-06-01 21:27:33 DEBUG ClientManager:45 - Sending the request.
+2015-06-01 21:27:33 DEBUG ClientManager:54 - Receiving the response.
+2015-06-01 21:27:47 INFO  ClientManager:63 - RESPONSE: {"id":1,"title":"Kati trexei me ti Mairi","category":"Commedy","description":"Polu orraia tainia"}
+2015-06-01 21:27:47 DEBUG ClientManager:68 - Completed.

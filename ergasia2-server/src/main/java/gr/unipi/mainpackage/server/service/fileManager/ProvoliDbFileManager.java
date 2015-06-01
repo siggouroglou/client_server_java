@@ -25,6 +25,11 @@ public class ProvoliDbFileManager implements DbFileManager<Provoli> {
     private static final String DB_PATH = "database/Provoli.db";
 
     @Override
+    public List<Provoli> search(Provoli t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public Provoli create(Provoli provoli) {
         // Get all the admins from file.
         List<Provoli> dbList = readOrWriteToFile(null);
@@ -74,7 +79,7 @@ public class ProvoliDbFileManager implements DbFileManager<Provoli> {
                 if (array == null) {
                     return new ArrayList<>();
                 } else {
-                    return Arrays.asList(array);
+                    return new ArrayList<>(Arrays.asList(array));
                 }
             } catch (Exception ex) {
                 logger.error("DB Provoli file didn't read.", ex);

@@ -8,14 +8,18 @@ import gr.unipi.mainpackage.server.lib.authority.AuthorizationException;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import gr.unipi.mainpackage.server.model.data.Admin;
 import gr.unipi.mainpackage.server.service.fileManager.AdminDbFileManager;
+import java.util.List;
 
 /**
  * Database methods for model Admin.
  * <br/>
- * Every method name follows a standard convention that is used for Java Reflections calls from request manager.
+ * Every method name follows a standard convention that is used for Java
+ * Reflections calls from request manager.
+ *
  * @author siggouroglou@gmail.com
  */
 public class AdminService implements SignInAbleService {
+
     AdminDbFileManager dbManager;
 
     public AdminService() {
@@ -38,7 +42,7 @@ public class AdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.Admin_S, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         return null;
     }
@@ -59,10 +63,10 @@ public class AdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.Admin_C, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         Admin adminNew = dbManager.create(admin);
-        
+
         return adminNew;
     }
 
@@ -83,7 +87,7 @@ public class AdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.Admin_U, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         System.out.println("Admin updated");
         return null;
@@ -105,7 +109,7 @@ public class AdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.Admin_D, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         System.out.println("Admin deleted");
         return null;
@@ -126,20 +130,24 @@ public class AdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.Admin_R, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         System.out.println("Read all Admins");
         return null;
     }
-    
+
     @Override
-    public boolean login(SignInAbleUser user){
-        return true;
+    public AuthorizedUser login(SignInAbleUser user) {
+        // Get the user with this username, password.
+        List<Admin> adminList = dbManager.search((Admin) user);
+        
+        // Return true if it is found.
+        return adminList.size() == 1 ? adminList.get(0) : null;
     }
-    
+
     @Override
-    public boolean logout(SignInAbleUser user){
-        return true;
+    public AuthorizedUser logout(SignInAbleUser user) {
+        return null;
     }
 
 }

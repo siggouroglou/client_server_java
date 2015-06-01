@@ -135,12 +135,12 @@ public class CustomerService implements SignInAbleService {
     }
     
     @Override
-    public boolean login(SignInAbleUser user){
-        return true;
+    public AuthorizedUser login(SignInAbleUser user){
+        return null;
     }
     
     @Override
-    public boolean logout(SignInAbleUser user){
-        return true;
+    public AuthorizedUser logout(SignInAbleUser user){
+        return null;
     }
 }

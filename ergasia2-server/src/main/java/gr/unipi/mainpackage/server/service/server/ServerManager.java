@@ -10,9 +10,9 @@ import gr.unipi.mainpackage.server.lib.session.SessionCache;
 import gr.unipi.mainpackage.server.model.server.RequestModel;
 import gr.unipi.mainpackage.server.model.server.ResponseErrorModel;
 import gr.unipi.mainpackage.server.model.server.ResponseModel;
-import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -23,14 +23,14 @@ import java.net.Socket;
  *
  * @author siggouroglou@gmail.com
  */
-public class ClientManager extends Thread {
+public class ServerManager extends Thread {
 
-    private static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(ClientManager.class);
+    private static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(ServerManager.class);
 
     private final Socket socket;
     private boolean isUp = true;
 
-    public ClientManager(Socket socket) {
+    public ServerManager(Socket socket) {
         super();
         this.socket = socket;
     }
@@ -84,12 +84,13 @@ public class ClientManager extends Thread {
 
         // Read the socket.
         logger.debug("Reading the request.");
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+        try {
+            DataInputStream input = new DataInputStream(socket.getInputStream());
             Gson gson = new GsonBuilder()
                     .setDateFormat("dd.MM.yyyy")
                     .create();
 
-            request = gson.fromJson(reader.readLine(), RequestModel.class);
+            request = gson.fromJson(input.readUTF(), RequestModel.class);
         } catch (Exception ex) {
             logger.error("Not valid request.", ex);
             sendError("Not valid request.");
@@ -148,6 +149,55 @@ public class ClientManager extends Thread {
         }
 
         return null;
+    }
+
+    /**
+     * Executes the request that is managing the login and logout of the
+     * application.
+     *
+     * @param request
+     * @param serviceInstance
+     * @param modelInstance
+     * @return
+     */
+    private ResponseModel manageRequest_auth(RequestModel request, Object serviceInstance, Object modelInstance) {
+        // Get the method to run using Java Reflection.
+        logger.debug("Get the login/out method.");
+        Method method = null;
+        try {
+            method = serviceInstance.getClass().getMethod(request.getMethod().toString(), SignInAbleUser.class);
+        } catch (NoSuchMethodException | SecurityException ex) {
+            logger.fatal("Request method was not valid.", ex);
+            sendError("Request method was not valid.");
+            closeRequest();
+            isUp = false;
+            return null;
+        }
+
+        // Wrap the output to Reponse model by running the method using Java Reflection.
+        logger.debug("Wrap the output to Reponse model.");
+        ResponseModel response = null;
+        try {
+            // Get the returned object.
+            Object invoke = method.invoke(serviceInstance, modelInstance);
+
+            // Check if this user is logged in successfully.
+            int sessionId = -1;
+            if (invoke != null && invoke instanceof AuthorizedUser) {
+                sessionId = SessionCache.getInstance().loginUser((AuthorizedUser) invoke);
+            }
+
+            response = new ResponseModel();
+            response.setSessionId(sessionId);
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
+            logger.fatal("Request method was not valid while requested to run.", ex);
+            sendError("Request method was not valid while requested to run.");
+            closeRequest();
+            isUp = false;
+            return null;
+        }
+
+        return response;
     }
 
     /**
@@ -225,52 +275,6 @@ public class ClientManager extends Thread {
     }
 
     /**
-     * Executes the request that is managing the login and logout of the
-     * application.
-     *
-     * @param request
-     * @param serviceInstance
-     * @param modelInstance
-     * @return
-     */
-    private ResponseModel manageRequest_auth(RequestModel request, Object serviceInstance, Object modelInstance) {
-        // Get the method to run using Java Reflection.
-        logger.debug("Get the login/out method.");
-        Method method = null;
-        try {
-            method = serviceInstance.getClass().getMethod(request.getMethod().toString(), SignInAbleUser.class);
-        } catch (NoSuchMethodException | SecurityException ex) {
-            logger.fatal("Request method was not valid.", ex);
-            sendError("Request method was not valid.");
-            closeRequest();
-            isUp = false;
-            return null;
-        }
-
-        // Wrap the output to Reponse model by running the method using Java Reflection.
-        logger.debug("Wrap the output to Reponse model.");
-        ResponseModel response = null;
-        try {
-            // Get the returned object.
-            Object invoke = method.invoke(modelInstance);
-
-            // Manage the response.
-            Gson gson = new GsonBuilder()
-                    .setDateFormat("dd.MM.yyyy")
-                    .create();
-            response.setResponse(gson.toJson(invoke));
-        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
-            logger.fatal("Request method was not valid while requested to run.", ex);
-            sendError("Request method was not valid while requested to run.");
-            closeRequest();
-            isUp = false;
-            return null;
-        }
-
-        return response;
-    }
-
-    /**
      * Sending the response to the client.
      *
      * @param response The response that will be send.
@@ -282,8 +286,10 @@ public class ClientManager extends Thread {
 
         // Send the response to client.
         logger.debug("Sending response.");
-        try (PrintWriter writer = new PrintWriter(socket.getOutputStream(), true)) {
-            writer.write(responseJson);
+        try {
+            DataOutputStream output = new DataOutputStream(socket.getOutputStream());
+            output.writeUTF(responseJson);
+            output.flush();
         } catch (IOException ex) {
             logger.fatal("Sending response FAILED ( " + responseJson + ")", ex);
             isUp = false;

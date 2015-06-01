@@ -26,6 +26,11 @@ public class FilmDbFileManager implements DbFileManager<Film> {
     private static final String DB_PATH = "database/Film.db";
 
     @Override
+    public List<Film> search(Film t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public Film create(Film film) {
         // Get all the admins from file.
         List<Film> dbList = readOrWriteToFile(null);
@@ -75,7 +80,7 @@ public class FilmDbFileManager implements DbFileManager<Film> {
                 if (array == null) {
                     return new ArrayList<>();
                 } else {
-                    return Arrays.asList(array);
+                    return new ArrayList<>(Arrays.asList(array));
                 }
             } catch (Exception ex) {
                 logger.error("DB Film file didn't read.", ex);

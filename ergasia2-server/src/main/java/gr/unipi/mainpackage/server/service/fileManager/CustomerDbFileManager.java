@@ -26,6 +26,11 @@ public class CustomerDbFileManager implements DbFileManager<Customer> {
     private static final String DB_PATH = "database/Customer.db";
 
     @Override
+    public List<Customer> search(Customer t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public Customer create(Customer customer) {
         // Get all the admins from file.
         List<Customer> dbList = readOrWriteToFile(null);
@@ -75,7 +80,7 @@ public class CustomerDbFileManager implements DbFileManager<Customer> {
                 if (array == null) {
                     return new ArrayList<>();
                 } else {
-                    return Arrays.asList(array);
+                    return new ArrayList<>(Arrays.asList(array));
                 }
             } catch (Exception ex) {
                 logger.error("DB Customer file didn't read.", ex);

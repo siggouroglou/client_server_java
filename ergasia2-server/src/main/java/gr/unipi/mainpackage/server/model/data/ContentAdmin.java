@@ -6,6 +6,7 @@ import static gr.unipi.mainpackage.server.lib.authority.Authority.*;
 import gr.unipi.mainpackage.server.lib.authority.AuthorizedUser;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -62,6 +63,28 @@ public class ContentAdmin implements AuthorizedUser, SignInAbleUser {
         };
 
         return Arrays.asList(authorityArray);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 79 * hash + Objects.hashCode(this.username);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ContentAdmin other = (ContentAdmin) obj;
+        if (!Objects.equals(this.username, other.username)) {
+            return false;
+        }
+        return true;
     }
 
 }

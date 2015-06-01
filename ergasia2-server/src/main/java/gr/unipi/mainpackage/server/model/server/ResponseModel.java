@@ -6,9 +6,11 @@ package gr.unipi.mainpackage.server.model.server;
  */
 public class ResponseModel {
     private String response;
+    private int sessionId;
 
     public ResponseModel() {
         this.response = "";
+        this.sessionId = -1;
     }
 
     public String getResponse() {
@@ -17,5 +19,13 @@ public class ResponseModel {
 
     public void setResponse(String response) {
         this.response = response;
+    }
+
+    public int getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(int sessionId) {
+        this.sessionId = sessionId;
     }
 }

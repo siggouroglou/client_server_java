@@ -26,6 +26,11 @@ public class CinemaRoomDbFileManager implements DbFileManager<CinemaRoom> {
     private static final String DB_PATH = "database/CinemaRoom.db";
 
     @Override
+    public List<CinemaRoom> search(CinemaRoom t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public CinemaRoom create(CinemaRoom cinemaRoom) {
         // Get all the admins from file.
         List<CinemaRoom> dbList = readOrWriteToFile(null);
@@ -75,7 +80,7 @@ public class CinemaRoomDbFileManager implements DbFileManager<CinemaRoom> {
                 if (array == null) {
                     return new ArrayList<>();
                 } else {
-                    return Arrays.asList(array);
+                    return new ArrayList<>(Arrays.asList(array));
                 }
             } catch (Exception ex) {
                 logger.error("DB CinemaRoom file didn't read.", ex);
