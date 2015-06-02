@@ -14,20 +14,23 @@ import java.util.List;
  *
  * Database methods for model ContentAdmin.
  * <br/>
- * Every method name follows a standard convention that is used for Java Reflections calls from request manager.
+ * Every method name follows a standard convention that is used for Java
+ * Reflections calls from request manager.
+ *
  * @author siggouroglou@gmail.com
  */
 public class ContentAdminService implements SignInAbleService {
+
     ContentAdminDbFileManager dbManager;
 
     public ContentAdminService() {
         dbManager = new ContentAdminDbFileManager();
     }
-    
+
     /**
      *
-     * @param contentAdmin The object that includes the criteria that will be used for
-     * searching. Criteria is every column is not having null value.
+     * @param contentAdmin The object that includes the criteria that will be
+     * used for searching. Criteria is every column is not having null value.
      * @param user
      * @return
      */
@@ -40,9 +43,9 @@ public class ContentAdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.ContentAdmin_S, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -61,10 +64,10 @@ public class ContentAdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.ContentAdmin_C, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
         ContentAdmin contentAdminNew = dbManager.create(contentAdmin);
-        
+
         return contentAdminNew;
     }
 
@@ -72,7 +75,8 @@ public class ContentAdminService implements SignInAbleService {
      * Update an existing contentAdmin.
      *
      * @param id The id of the existing contentAdmin that will be updated.
-     * @param contentAdmin The contentAdmin that will replace the existing contentAdmin.
+     * @param contentAdmin The contentAdmin that will replace the existing
+     * contentAdmin.
      * @param user
      * @return The new updated contentAdmin object.
      */
@@ -85,10 +89,9 @@ public class ContentAdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.ContentAdmin_U, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
-        System.out.println("ContentAdmin updated");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -107,10 +110,9 @@ public class ContentAdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.ContentAdmin_D, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
-        System.out.println("ContentAdmin deleted");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -128,24 +130,23 @@ public class ContentAdminService implements SignInAbleService {
         if (!AuthorityUtils.hasAuthority(Authority.ContentAdmin_R, user)) {
             throw new AuthorizationException("User does not have the requires permissions.");
         }
-        
+
         // Implement the code.
-        System.out.println("Read all ContentAdmins");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
     @Override
-    public AuthorizedUser login(SignInAbleUser user){
+    public AuthorizedUser login(SignInAbleUser user) {
         // Get the user with this username, password.
         List<ContentAdmin> contentAdminList = dbManager.search((ContentAdmin) user);
-        
+
         // Return true if it is found.
         return contentAdminList.size() == 1 ? contentAdminList.get(0) : null;
     }
-    
+
     @Override
-    public AuthorizedUser logout(SignInAbleUser user){
-        return null;
+    public AuthorizedUser logout(SignInAbleUser user) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

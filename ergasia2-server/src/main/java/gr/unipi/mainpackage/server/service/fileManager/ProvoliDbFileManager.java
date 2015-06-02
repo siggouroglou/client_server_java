@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,19 +26,36 @@ public class ProvoliDbFileManager implements DbFileManager<Provoli> {
     private static final String DB_PATH = "database/Provoli.db";
 
     @Override
-    public List<Provoli> search(Provoli t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Provoli> search(Provoli provoli) {
+        // Get all the provolis from file.
+        List<Provoli> dbList = readOrWriteToFile(null);
+        List<Provoli> returnList = new LinkedList<>();
+
+        // Search for object that are simmilar with the argument.
+        for (Provoli curent : dbList) {
+            if ((provoli.getId() <= 0 || (provoli.getId() > 0 && provoli.getId() == curent.getId()))
+                    && (provoli.getFilmId() <= 0 || (provoli.getFilmId() > 0 && provoli.getFilmId() == curent.getFilmId()))
+                    && (provoli.getCinemaRoomId() <= 0 || (provoli.getCinemaRoomId() > 0 && provoli.getCinemaRoomId() == curent.getCinemaRoomId()))
+                    && (provoli.getStartDate() == null || (provoli.getStartDate() != null && provoli.getStartDate().equals(curent.getStartDate())))
+                    && (provoli.getEndDate() == null || (provoli.getEndDate() != null && provoli.getEndDate().equals(curent.getEndDate())))
+                    && (provoli.getNumberOfReservations() <= 0 || (provoli.getNumberOfReservations() > 0 && provoli.getNumberOfReservations() == curent.getNumberOfReservations()))
+                    && (provoli.isAvailable() == curent.isAvailable())) {
+                returnList.add(curent);
+            }
+        }
+
+        return returnList;
     }
 
     @Override
     public Provoli create(Provoli provoli) {
-        // Get all the admins from file.
+        // Get all the provolis from file.
         List<Provoli> dbList = readOrWriteToFile(null);
 
         // Add the new one.
         dbList.add(provoli);
 
-        // Get the distinct admin List.
+        // Get the distinct provoli List.
         List<Provoli> distinctList = dbList.stream().distinct().collect(Collectors.toList());
 
         // Save them back to file.

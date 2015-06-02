@@ -61,7 +61,6 @@ public class ReservationService {
         }
 
         // Implement the code.
-        System.out.println("Reading all the Reservations of the customer");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

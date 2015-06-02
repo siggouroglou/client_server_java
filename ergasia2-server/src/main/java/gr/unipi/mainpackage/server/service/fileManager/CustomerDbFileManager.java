@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,19 +27,32 @@ public class CustomerDbFileManager implements DbFileManager<Customer> {
     private static final String DB_PATH = "database/Customer.db";
 
     @Override
-    public List<Customer> search(Customer t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Customer> search(Customer customer) {
+        // Get all the customers from file.
+        List<Customer> dbList = readOrWriteToFile(null);
+        List<Customer> returnList = new LinkedList<>();
+
+        // Search for object that are simmilar with the argument.
+        for (Customer curent : dbList) {
+            if ((customer.getName().isEmpty() || (!customer.getName().isEmpty() && customer.getName().equals(curent.getName())))
+                    && (customer.getUsername().isEmpty() || (!customer.getUsername().isEmpty() && customer.getUsername().equals(curent.getUsername())))
+                    && (customer.getPassword().isEmpty() || (!customer.getPassword().isEmpty() && customer.getPassword().equals(curent.getPassword())))) {
+                returnList.add(curent);
+            }
+        }
+
+        return returnList;
     }
 
     @Override
     public Customer create(Customer customer) {
-        // Get all the admins from file.
+        // Get all the customers from file.
         List<Customer> dbList = readOrWriteToFile(null);
 
         // Add the new one.
         dbList.add(customer);
 
-        // Get the distinct admin List.
+        // Get the distinct customer List.
         List<Customer> distinctList = dbList.stream().distinct().collect(Collectors.toList());
 
         // Save them back to file.

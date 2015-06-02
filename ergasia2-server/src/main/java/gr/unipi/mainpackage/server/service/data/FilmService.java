@@ -23,6 +23,29 @@ public class FilmService {
     }
 
     /**
+     * Search for a film.
+     *
+     * @param film The film to be searched for.
+     * @param user
+     * @return the new film object.
+     */
+    public List<Film> searchFilm(Film film, AuthorizedUser user) {
+        // Check the arguments.
+        if (film == null || user == null) {
+            throw new IllegalArgumentException("Null arguments.");
+        }
+        // Check the user authorization.
+        if (!AuthorityUtils.hasAuthority(Authority.Film_S, user)) {
+            throw new AuthorizationException("User does not have the requires permissions.");
+        }
+        
+        // Implement the code.
+        List<Film> filmFoundList = dbManager.search(film);
+        
+        return filmFoundList;
+    }
+
+    /**
      * Creates a new film.
      *
      * @param film The film to be created.
@@ -64,8 +87,7 @@ public class FilmService {
         }
 
         // Implement the code.
-        System.out.println("Film created");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -86,8 +108,7 @@ public class FilmService {
         }
 
         // Implement the code.
-        System.out.println("Film delete");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -107,8 +128,7 @@ public class FilmService {
         }
 
         // Implement the code.
-        System.out.println("Read all the Films");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

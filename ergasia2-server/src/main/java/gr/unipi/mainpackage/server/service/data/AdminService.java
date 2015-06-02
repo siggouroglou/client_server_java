@@ -44,7 +44,7 @@ public class AdminService implements SignInAbleService {
         }
 
         // Implement the code.
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -89,8 +89,7 @@ public class AdminService implements SignInAbleService {
         }
 
         // Implement the code.
-        System.out.println("Admin updated");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -111,8 +110,7 @@ public class AdminService implements SignInAbleService {
         }
 
         // Implement the code.
-        System.out.println("Admin deleted");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -132,8 +130,7 @@ public class AdminService implements SignInAbleService {
         }
 
         // Implement the code.
-        System.out.println("Read all Admins");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
@@ -147,7 +144,7 @@ public class AdminService implements SignInAbleService {
 
     @Override
     public AuthorizedUser logout(SignInAbleUser user) {
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

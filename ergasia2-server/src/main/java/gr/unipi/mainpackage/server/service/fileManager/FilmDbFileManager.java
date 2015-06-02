@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,19 +27,33 @@ public class FilmDbFileManager implements DbFileManager<Film> {
     private static final String DB_PATH = "database/Film.db";
 
     @Override
-    public List<Film> search(Film t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Film> search(Film film) {
+        // Get all the films from file.
+        List<Film> dbList = readOrWriteToFile(null);
+        List<Film> returnList = new LinkedList<>();
+
+        // Search for object that are simmilar with the argument.
+        for (Film curent : dbList) {
+            if ((film.getId() < 0 || (film.getId() >= 0 && film.getId() == curent.getId()))
+                    && (film.getTitle().isEmpty() || (!film.getTitle().isEmpty() && film.getTitle().equals(curent.getTitle())))
+                    && (film.getCategory().isEmpty() || (!film.getCategory().isEmpty() && film.getCategory().equals(curent.getCategory())))
+                    && (film.getDescription().isEmpty() || (!film.getDescription().isEmpty() && film.getDescription().equals(curent.getDescription())))) {
+                returnList.add(curent);
+            }
+        }
+
+        return returnList;
     }
 
     @Override
     public Film create(Film film) {
-        // Get all the admins from file.
+        // Get all the films from file.
         List<Film> dbList = readOrWriteToFile(null);
 
         // Add the new one.
         dbList.add(film);
 
-        // Get the distinct admin List.
+        // Get the distinct film List.
         List<Film> distinctList = dbList.stream().distinct().collect(Collectors.toList());
 
         // Save them back to file.

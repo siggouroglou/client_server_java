@@ -42,7 +42,7 @@ public class CustomerService implements SignInAbleService {
         }
         
         // Implement the code.
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -87,8 +87,7 @@ public class CustomerService implements SignInAbleService {
         }
         
         // Implement the code.
-        System.out.println("User updated");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -109,8 +108,7 @@ public class CustomerService implements SignInAbleService {
         }
         
         // Implement the code.
-        System.out.println("User deleted");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -130,17 +128,20 @@ public class CustomerService implements SignInAbleService {
         }
         
         // Implement the code.
-        System.out.println("Read all Users");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
     @Override
     public AuthorizedUser login(SignInAbleUser user){
-        return null;
+        // Get the user with this username, password.
+        List<Customer> customerList = dbManager.search((Customer) user);
+        
+        // Return true if it is found.
+        return customerList.size() == 1 ? customerList.get(0) : null;
     }
     
     @Override
     public AuthorizedUser logout(SignInAbleUser user){
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

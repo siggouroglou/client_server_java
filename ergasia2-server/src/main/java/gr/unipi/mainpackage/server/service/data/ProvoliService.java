@@ -21,6 +21,29 @@ public class ProvoliService {
     public ProvoliService() {
         dbManager = new ProvoliDbFileManager();
     }
+
+    /**
+     * Search for a provoli.
+     *
+     * @param provoli The provoli to be searched for.
+     * @param user
+     * @return the new provoli object.
+     */
+    public List<Provoli> searchProvoli(Provoli provoli, AuthorizedUser user) {
+        // Check the arguments.
+        if (provoli == null || user == null) {
+            throw new IllegalArgumentException("Null arguments.");
+        }
+        // Check the user authorization.
+        if (!AuthorityUtils.hasAuthority(Authority.Provoli_S, user)) {
+            throw new AuthorizationException("User does not have the requires permissions.");
+        }
+        
+        // Implement the code.
+        List<Provoli> provoliFoundList = dbManager.search(provoli);
+        
+        return provoliFoundList;
+    }
     
     /**
      * Create a provoli object.
@@ -62,8 +85,7 @@ public class ProvoliService {
         }
 
         // Implement the code.
-        System.out.println("Provoli updated");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
     /**
@@ -83,8 +105,7 @@ public class ProvoliService {
         }
 
         // Implement the code.
-        System.out.println("Provoli deleted");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
     /**
@@ -104,7 +125,6 @@ public class ProvoliService {
         }
 
         // Implement the code.
-        System.out.println("read all the Provoli");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

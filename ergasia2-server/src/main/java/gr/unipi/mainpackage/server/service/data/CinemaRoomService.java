@@ -63,8 +63,7 @@ public class CinemaRoomService {
         }
 
         // Implement the code.
-        System.out.println("CinemaRoom update");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -85,8 +84,7 @@ public class CinemaRoomService {
         }
 
         // Implement the code.
-        System.out.println("CinemaRoom delete");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -106,7 +104,6 @@ public class CinemaRoomService {
         }
 
         // Implement the code.
-        System.out.println("Read all the CinemaRooms");
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
