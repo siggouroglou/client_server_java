@@ -32,11 +32,12 @@ public class StartUp {
     private static final Logger logger = Logger.getLogger(StartUp.class);
 
     public static void main(String[] args) {
+        // Un comment the answer you prefer.
         // Run the answer for the 1st question of the project.
 //        answer1();
 
         // Run the answer for the 2nd question of the project.
-        answer2();
+//        answer2();
     }
 
     private static void answer1() {

@@ -1,0 +1,527 @@
+2015-06-02 18:09:42 DEBUG MainServer:30 - Open the network port.
+2015-06-02 18:09:42 INFO  PropertiesUtilities:31 - Property file loaded successfully.
+2015-06-02 18:09:42 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:140 - Login/out method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:165 - Get the login/out method.
+2015-06-02 18:10:24 DEBUG ServerManager:178 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:140 - Login/out method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:165 - Get the login/out method.
+2015-06-02 18:10:24 DEBUG ServerManager:178 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:24 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:24 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:24 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:24 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:24 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:24 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:24 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:24 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:24 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:24 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:140 - Login/out method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:165 - Get the login/out method.
+2015-06-02 18:10:32 DEBUG ServerManager:178 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:140 - Login/out method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:165 - Get the login/out method.
+2015-06-02 18:10:32 DEBUG ServerManager:178 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG MainServer:43 - Manage the connection to another thread.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.
+2015-06-02 18:10:32 DEBUG MainServer:40 - Waiting for a connection.
+2015-06-02 18:10:32 DEBUG ServerManager:47 - Check the socket state.
+2015-06-02 18:10:32 DEBUG ServerManager:86 - Reading the request.
+2015-06-02 18:10:32 DEBUG ServerManager:114 - Get the model and service instances.
+2015-06-02 18:10:32 DEBUG ServerManager:147 - Data management method detected.
+2015-06-02 18:10:32 DEBUG ServerManager:222 - Check if user is logged in.
+2015-06-02 18:10:32 DEBUG ServerManager:242 - Get the data management method.
+2015-06-02 18:10:32 DEBUG ServerManager:255 - Wrap the output to Reponse model.
+2015-06-02 18:10:32 DEBUG ServerManager:288 - Sending response.
+2015-06-02 18:10:32 DEBUG ServerManager:327 - Close the connection.

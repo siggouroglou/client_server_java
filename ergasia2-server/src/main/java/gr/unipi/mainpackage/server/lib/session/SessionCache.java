@@ -49,10 +49,10 @@ public final class SessionCache {
     public boolean isExpired(Integer sessionId) {
         AuthorizationModel model = sessionMap.get(sessionId);
         
-        // Check if has passed more than expireMinutes time.
+        // Check if has passed more than expireMilis time.
         Date now = new Date();
         Date lastAccess = model.getLastAccess();
-        if((now.getTime() - lastAccess.getTime()) > PropertiesUtilities.getInstance().getInt("session.expireMinutes")) {
+        if((now.getTime() - lastAccess.getTime()) > PropertiesUtilities.getInstance().getInt("session.expireMilis")) {
             // Session expired.
             sessionMap.remove(sessionId);
             return true;
